@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: silk;
+  themes: garden;
 }
 @tailwind utilities;
 
@@ -13,7 +13,7 @@ body {
 
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(0px);
   transition: opacity 1.5s ease, transform 1s ease;
 }
 
