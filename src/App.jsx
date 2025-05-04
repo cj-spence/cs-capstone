@@ -16,6 +16,7 @@ function Home() {
       <Landing />
       <Introduction />
       <Timeline1 />
+      <About />
     </>
   );
 }

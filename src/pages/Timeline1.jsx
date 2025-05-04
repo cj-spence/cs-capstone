@@ -1,11 +1,11 @@
-import Example from "../components/Example";
+import HorizontalScroll from "../components/HorizontalScroll";
 
 export const Timeline1 = () => {
 
     return (
         <section id="" className="min-h-screen">
 
-            <Example />
+            <HorizontalScroll />
 
         </section>
     );
