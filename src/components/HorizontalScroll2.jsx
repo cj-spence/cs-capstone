@@ -2,7 +2,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 import ReactPlayer from "react-player";
 
-const HorizontalScroll = () => {
+const HorizontalScroll2 = () => {
   return (
     <div className="">
       <HorizontalScrollVideo />
@@ -140,4 +140,4 @@ const VideoPlayer = ({ url }) => {
   );
 };
 
-export default HorizontalScroll;
+export default HorizontalScroll2;

@@ -3,6 +3,7 @@ import './index.css'
 import { Landing } from './pages/Landing'
 import { Introduction } from './pages/Introduction'
 import { Timeline1 } from './pages/Timeline1'
+import { Timeline2 } from './pages/Timeline2'
 import { Navbar } from './components/Navbar'
 import { About } from './pages/About'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -17,6 +18,7 @@ function Home() {
       <Introduction />
       <Timeline1 />
       <About />
+      <Timeline2 />
     </>
   );
 }
