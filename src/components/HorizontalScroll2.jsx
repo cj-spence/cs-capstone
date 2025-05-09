@@ -5,7 +5,10 @@ import ReactPlayer from "react-player";
 const HorizontalScroll2 = () => {
   return (
     <div className="">
-      <HorizontalScrollVideo />
+        <div className="text-center items-center justify-center font-bold text-2xl translate-y-30 drop-shadow-xl bg-secondary rounded-xl w-fit mx-auto px-3 py-3">
+            <div className="bg-accent rounded-xl py-3 px-3"> Experience at SMC </div>
+        </div>
+        <HorizontalScrollVideo />
     </div>
   );
 };

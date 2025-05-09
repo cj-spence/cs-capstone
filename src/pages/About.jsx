@@ -27,7 +27,7 @@ export const About = () => {
                 </h3>         
                 
                 <p className='text-lg text-black'>
-                    Developed by <span className="font-bold">CJ Spence</span> and <span className="font-bold">Jonathan Chambers</span>.
+                    Developed by <a href="https://cjspence.com" target="_blank" className="font-bold underline decoration-dotted"> CJ Spence </a> and <span className="font-bold">Jonathan Chambers</span>.
                 </p>
 
                 <div className='flex space-x-6 justify-center'>

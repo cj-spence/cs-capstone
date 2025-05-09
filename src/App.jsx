@@ -4,6 +4,9 @@ import { Landing } from './pages/Landing'
 import { Introduction } from './pages/Introduction'
 import { Timeline1 } from './pages/Timeline1'
 import { Timeline2 } from './pages/Timeline2'
+import { Timeline3 } from './pages/Timeline3'
+import { Timeline4 } from './pages/Timeline4'
+import { Outro } from './pages/Outro'
 import { Navbar } from './components/Navbar'
 import { About } from './pages/About'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -19,6 +22,11 @@ function Home() {
       <Timeline1 />
       <About />
       <Timeline2 />
+      <About />
+      <Timeline3 />
+      <About />
+      <Timeline4 />
+      <Outro />
     </>
   );
 }

@@ -3,7 +3,7 @@ import { ScrollDown } from "../components/ScrollDown";
 export const Landing = () => {
     
     return (
-        <section id="/" className="min-h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70">
+        <section id="/" className="min-h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden">
 
                 <div data-aos="fade-up" data-aos-delay="300" className="mx-auto px-4 sm:px-6 w-full max-w-4xl">
                     <h1 className="text-4xl md:text-7xl font-bold mb-6">Hey there.</h1>

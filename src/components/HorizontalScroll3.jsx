@@ -2,11 +2,11 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 import ReactPlayer from "react-player";
 
-const HorizontalScroll = () => {
+const HorizontalScroll3 = () => {
   return (
     <div className="">
         <div className="text-center items-center justify-center font-bold text-2xl translate-y-30 drop-shadow-xl bg-secondary rounded-xl w-fit mx-auto px-3 py-3">
-            <div className="bg-accent rounded-xl py-3 px-3"> Early Life </div>
+            <div className="bg-accent rounded-xl py-3 px-3"> Black Studies </div>
         </div>
         <HorizontalScrollVideo />
     </div>
@@ -143,4 +143,4 @@ const VideoPlayer = ({ url }) => {
   );
 };
 
-export default HorizontalScroll;
+export default HorizontalScroll3;
