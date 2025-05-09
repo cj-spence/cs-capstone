@@ -1,5 +1,6 @@
 import Herman from '../assets/herman.png'
 import Musheer from '../assets/musheer.png'
+
 export const Introduction = () => {
     return (
         <section id="" className="min-h-screen flex flex-col items-center text-center justify-center relative px-4 overflow-hidden">
@@ -14,7 +15,8 @@ export const Introduction = () => {
                       className='mask mask-squircle w-full h-full object-cover'
                     />
                   </div>
-                  <div className="absolute bottom-full left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 w-[90vw] md:w-fit max-w-[300px] md:max-w-3xl pointer-events-none">
+                  {/* Added sm:opacity-0 and sm:group-hover:opacity-100 */}
+                  <div className="hidden md:block absolute bottom-full left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 mb-2 opacity-0 sm:opacity-0 sm:group-hover:opacity-100 group-hover:opacity-100 transition-opacity duration-500 w-[90vw] md:w-fit max-w-[300px] md:max-w-3xl pointer-events-none">
                     <div className="chat chat-start">
                       <div className="chat-bubble bg-accent rounded-3xl px-4 py-3 md:px-6 md:py-4 text-md md:text-lg font-medium text-black shadow-lg hover:shadow-xl transition-shadow leading-relaxed tracking-wide">
                         "But this is something now about Ethnic Studies, this is an opportunity to become an activist."
@@ -40,7 +42,8 @@ export const Introduction = () => {
                       className='mask mask-squircle w-md h-md object-cover'
                     />
                   </div>
-                  <div className="absolute bottom-full right-1/2 md:right-0 translate-x-1/2 md:translate-x-0 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 w-[90vw] md:w-fit max-w-[300px] md:max-w-3xl pointer-events-none">
+                  {/* Added sm:opacity-0 and sm:group-hover:opacity-100 */}
+                  <div className="hidden md:block absolute bottom-full right-1/2 md:right-0 translate-x-1/2 md:translate-x-0 mb-2 opacity-0 sm:opacity-0 sm:group-hover:opacity-100 group-hover:opacity-100 transition-opacity duration-500 w-[90vw] md:w-fit max-w-[300px] md:max-w-3xl pointer-events-none">
                     <div className="chat chat-end">
                       <div className="chat-bubble bg-secondary rounded-3xl px-4 py-3 md:px-6 md:py-4 text-md md:text-lg font-medium text-black hover:shadow-xl transition-shadow leading-relaxed tracking-wide">
                         "Remember, it's not the people in power, it's the power in the people."
