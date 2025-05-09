@@ -36,7 +36,7 @@ export const Navbar = () => {
             </div>
             <div className="navbar-center">
                 <div className="flex flex-col items-center">
-                    <div className="flex items-center gap-2"> 
+                    <div className="flex items-center justify-center gap-2"> 
                         <progress 
                             className="bg-gray-300 progress progress-secondary w-32 md:w-90" 
                             value={scrollProgress} 

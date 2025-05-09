@@ -1,7 +1,5 @@
 import Herman from '../assets/herman.png'
 import Musheer from '../assets/musheer.png'
-import { ScrollDown } from '../components/ScrollDown';
-
 export const Introduction = () => {
     return (
         <section id="" className="min-h-screen flex flex-col items-center text-center justify-center relative px-4 overflow-hidden">
@@ -39,7 +37,7 @@ export const Introduction = () => {
                     <img 
                       src={Musheer} 
                       alt="Musheer" 
-                      className='mask mask-squircle w-full h-full object-cover'
+                      className='mask mask-squircle w-md h-md object-cover'
                     />
                   </div>
                   <div className="absolute bottom-full right-1/2 md:right-0 translate-x-1/2 md:translate-x-0 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 w-[90vw] md:w-fit max-w-[300px] md:max-w-3xl pointer-events-none">
