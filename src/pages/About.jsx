@@ -8,7 +8,7 @@ export const About = () => {
     return (
         <section id="/about" className="h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden">
 
-            <div data-aos="zoom-in" data-aos-duration="2000" className="flex flex-col items-center justify-center mx-auto px-4 text-center sm:px-6 w-full max-w-4xl">
+            <div data-aos="fade" data-aos-duration="2000" className="flex flex-col items-center justify-center mx-auto px-4 text-center sm:px-6 w-full max-w-4xl">
             <h1 className="text-4xl md:text-7xl font-bold mb-6 drop-shadow-xl"> Made With Love </h1>
             <div className="bg-secondary p-6 rounded-2xl max-w-3xl w-full">
                 <div className="bg-accent p-6 rounded-xl space-y-6">
@@ -20,9 +20,9 @@ export const About = () => {
                 </h2>
                 
                 <h3 className="text-md md:text-xl font-medium">
-                    Thank you to <span className="font-bold">Professor Viola</span> and all{" "}
+                    Thank you to <span className="font-bold">Professor Viola</span> and the{" "}
                     <span className="tooltip" data-tip="Paris Alcaraz, Natalia Cortev, Kalilah Epperson-Lee, Khalia Gathwright, Alexis Hackett, Eloise Hampson, Dante Hauser, Evony Jackson, Julian Jimenez, Kaleia Ketcham, Julie Lacerda, Eduardo Leon, Thibaud Maxant, Maiya Mccleod, Erica Meyers, Savannah Peden, Gwen Penalber, Christopher Spence.">
-                    <span className="underline decoration-dotted cursor-pointer font-semibold">ES-201 Students</span>.
+                    <span className="underline decoration-dotted cursor-pointer font-semibold">ES-201 Class</span>.
                     </span>{" "}
                 </h3>         
                 

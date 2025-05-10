@@ -15,7 +15,6 @@ export const Introduction = () => {
                       className='mask mask-squircle w-full h-full object-cover'
                     />
                   </div>
-                  {/* Added sm:opacity-0 and sm:group-hover:opacity-100 */}
                   <div className="hidden md:block absolute bottom-full left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 mb-2 opacity-0 sm:opacity-0 sm:group-hover:opacity-100 group-hover:opacity-100 transition-opacity duration-500 w-[90vw] md:w-fit max-w-[300px] md:max-w-3xl pointer-events-none">
                     <div className="chat chat-start">
                       <div className="chat-bubble bg-accent rounded-3xl px-4 py-3 md:px-6 md:py-4 text-md md:text-lg font-medium text-black shadow-lg hover:shadow-xl transition-shadow leading-relaxed tracking-wide">
@@ -26,7 +25,7 @@ export const Introduction = () => {
                 </div>
               </div>
               <div className="mt-3 text-center w-full">
-                <div className="badge badge-lg md:badge-xl badge-accent text-xl md:text-3xl font-semibold drop-shadow-lg px-4 py-3"> 
+                <div className="badge badge-lg md:badge-xl badge-accent text-xl md:text-3xl font-semibold drop-shadow-lg px-5 py-5"> 
                   Herman Brown 
                 </div>
               </div>
@@ -42,7 +41,6 @@ export const Introduction = () => {
                       className='mask mask-squircle w-md h-md object-cover'
                     />
                   </div>
-                  {/* Added sm:opacity-0 and sm:group-hover:opacity-100 */}
                   <div className="hidden md:block absolute bottom-full right-1/2 md:right-0 translate-x-1/2 md:translate-x-0 mb-2 opacity-0 sm:opacity-0 sm:group-hover:opacity-100 group-hover:opacity-100 transition-opacity duration-500 w-[90vw] md:w-fit max-w-[300px] md:max-w-3xl pointer-events-none">
                     <div className="chat chat-end">
                       <div className="chat-bubble bg-secondary rounded-3xl px-4 py-3 md:px-6 md:py-4 text-md md:text-lg font-medium text-black hover:shadow-xl transition-shadow leading-relaxed tracking-wide">
@@ -53,7 +51,7 @@ export const Introduction = () => {
                 </div>
               </div>
               <div className="mt-3 text-center w-full">
-                <div className="badge badge-lg md:badge-xl badge-secondary text-xl md:text-3xl font-semibold drop-shadow-lg px-4 py-3">
+                <div className="badge badge-lg md:badge-xl badge-secondary text-xl md:text-3xl font-semibold drop-shadow-lg px-5 py-5">
                   Musheer Abdul-Jabbar
                 </div>
               </div>

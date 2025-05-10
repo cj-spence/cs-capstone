@@ -6,6 +6,7 @@ import { Timeline1 } from './pages/Timeline1'
 import { Timeline2 } from './pages/Timeline2'
 import { Timeline3 } from './pages/Timeline3'
 import { Timeline4 } from './pages/Timeline4'
+import { GalleryMain } from './pages/GalleryMain'
 import { Outro } from './pages/Outro'
 import { Navbar } from './components/Navbar'
 import { About } from './pages/About'
@@ -58,6 +59,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/gallery" element={<GalleryMain />} />
       </Routes>
     </BrowserRouter>
   );
