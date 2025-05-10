@@ -13,7 +13,6 @@ export const GalleryMain = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 p-4 w-full max-w-md md:max-w-6xl mx-auto">
 
-                {/* Item 1 - Herman and Musheer */}
                 <div data-aos="fade-right" className="flex flex-col items-center">
                     <div className="relative flex justify-center drop-shadow-xl w-full">
                         <div className="group relative w-[250px] md:w-[300px]">
@@ -33,7 +32,6 @@ export const GalleryMain = () => {
                     </div>
                 </div>
 
-                {/* Item 2 - SMC In The '70s */}
                 <div data-aos="fade" className="flex flex-col items-center">
                     <div className="relative flex justify-center drop-shadow-xl w-full">
                         <div className="group relative w-[250px] md:w-[300px]">
@@ -53,7 +51,6 @@ export const GalleryMain = () => {
                     </div>
                 </div>
 
-                {/* Item 3 - Student Activism */}
                 <div data-aos="fade-left" className="flex flex-col items-center">
                     <div className="relative flex justify-center drop-shadow-xl w-full">
                         <div className="group relative w-[250px] md:w-[300px]">
