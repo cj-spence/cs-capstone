@@ -15,13 +15,13 @@ export const GalleryMain = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 p-4 w-full max-w-md md:max-w-6xl mx-auto">
 
                 <div data-aos="fade-right" className="flex flex-col items-center">
-                    <div className="relative flex justify-center drop-shadow-xl w-full">
+                    <div className="relative flex justify-center w-full">
                         <div className="group relative w-[250px] md:w-[300px]">
-                            <div className="bg-accent p-4 md:p-5 rounded-xl shadow-2xl w-full">
+                            <div className="bg-accent p-4 md:p-5 rounded-xl w-full">
                                 <Link to="/"><img 
                                     src={HermanMusheer} 
                                     alt="Herman and Musheer" 
-                                    className='w-full h-[200px] md:h-[250px] rounded-xl hover:scale-105 duration-300 transition-transform object-cover'
+                                    className='w-full h-[200px] md:h-[250px] rounded-xl shadow-2xl hover:scale-107 duration-300 transition-transform object-cover'
                                 /></Link>
                             </div>
                         </div>
@@ -34,13 +34,13 @@ export const GalleryMain = () => {
                 </div>
 
                 <div data-aos="fade" className="flex flex-col items-center">
-                    <div className="relative flex justify-center drop-shadow-xl w-full">
+                    <div className="relative flex justify-center w-full">
                         <div className="group relative w-[250px] md:w-[300px]">
-                            <div className="bg-secondary p-4 md:p-5 rounded-xl shadow-2xl w-full">
+                            <div className="bg-secondary p-4 md:p-5 rounded-xl w-full">
                                 <Link to="/"><img 
                                     src={Fist} 
                                     alt="Black Resistance" 
-                                    className='w-full h-[200px] md:h-[250px] rounded-xl hover:scale-105 duration-300 transition-transform object-cover'
+                                    className='w-full h-[200px] md:h-[250px] rounded-xl shadow-2xl hover:scale-107 duration-300 transition-transform object-cover'
                                 /></Link>
                             </div>
                         </div>
@@ -53,13 +53,13 @@ export const GalleryMain = () => {
                 </div>
 
                 <div data-aos="fade-left" className="flex flex-col items-center">
-                    <div className="relative flex justify-center drop-shadow-xl w-full">
+                    <div className="relative flex justify-center w-full">
                         <div className="group relative w-[250px] md:w-[300px]">
-                            <div className="bg-accent p-4 md:p-5 rounded-xl shadow-2xl w-full">
+                            <div className="bg-accent p-4 md:p-5 rounded-xl w-full">
                                 <Link to="/"><img 
                                     src={StudentActivism} 
                                     alt="Student Activism" 
-                                    className='w-full h-[200px] md:h-[250px] rounded-xl hover:scale-105 duration-300 transition-transform object-cover'
+                                    className='w-full h-[200px] md:h-[250px] rounded-xl shadow-2xl hover:scale-107 duration-300 transition-transform object-cover'
                                 /></Link>
                             </div>
                         </div>
