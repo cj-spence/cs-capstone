@@ -5,66 +5,66 @@ import { Link } from 'react-router-dom';
 
 export const GalleryMain = () => {
     return (
-        <section id="/gallery" className="h-screen flex flex-col items-center justify-center text-center relative pt-24 pb-16 md:py-24 lg:py-70 overflow-hidden">
+        <section id="/gallery" className="h-screen flex flex-col items-center justify-center text-center relative overflow-hidden p-4">
 
-            <div data-aos="fade" className="mb-6 text-lg md:text-2xl font-bold">
+            <div data-aos="fade" className="mb-2 md:mb-4 lg:mb-6 text-sm md:text-lg lg:text-2xl font-bold">
                 Click the pictures below to check out the galleries.
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 p-4 w-full max-w-md md:max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 lg:gap-6 w-full max-w-[280px] sm:max-w-md md:max-w-2xl lg:max-w-6xl mx-auto">
 
                 <div data-aos="fade-right" className="flex flex-col items-center">
-                    <div className="relative flex justify-center w-full">
-                        <div className="group relative w-[200px] md:w-[300px]">
-                            <div className="bg-accent p-4 md:p-5 rounded-xl w-full">
-                                <Link to="/"><img 
+                    <div className="relative w-full max-w-[140px] sm:max-w-[180px] md:max-w-full">
+                        <div className="bg-accent p-2 sm:p-3 md:p-4 rounded-lg w-full">
+                            <Link to="/">
+                                <img 
                                     src={Campus} 
                                     alt="Saint Mary's Campus 1970" 
-                                    className='w-full h-[150px] md:h-[250px] rounded-xl shadow-2xl hover:scale-107 duration-300 transition-transform object-cover'
-                                /></Link>
-                            </div>
+                                    className='w-full h-[100px] sm:h-[120px] md:h-[180px] lg:h-[250px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
+                                />
+                            </Link>
                         </div>
                     </div>
-                    <div className="mt-3 text-center w-full">
-                        <div className="badge badge-accent rounded-xl md:badge-xl text-md md:text-2xl font-semibold drop-shadow-lg px-4 py-4 w-[200px] md:w-[300px]"> 
+                    <div className="mt-1 sm:mt-2 md:mt-3 w-full">
+                        <div className="badge badge-accent rounded-md text-xs sm:text-sm md:text-lg font-medium px-2 py-1 sm:px-3 sm:py-2 w-full max-w-[140px] sm:max-w-[180px] md:max-w-full"> 
                             Saint Mary's in the '70s
                         </div>
                     </div>
                 </div>
 
                 <div data-aos="fade" className="flex flex-col items-center">
-                    <div className="relative flex justify-center w-full">
-                        <div className="group relative w-[200px] md:w-[300px]">
-                            <div className="bg-secondary p-4 md:p-5 rounded-xl w-full">
-                                <Link to="/"><img 
+                    <div className="relative w-full max-w-[140px] sm:max-w-[180px] md:max-w-full">
+                        <div className="bg-secondary p-2 sm:p-3 md:p-4 rounded-lg w-full">
+                            <Link to="/">
+                                <img 
                                     src={HermanMusheer} 
                                     alt="Black Resistance" 
-                                    className='w-full h-[150px] md:h-[250px] rounded-xl shadow-2xl hover:scale-107 duration-300 transition-transform object-cover'
-                                /></Link>
-                            </div>
+                                    className='w-full h-[100px] sm:h-[120px] md:h-[180px] lg:h-[250px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
+                                />
+                            </Link>
                         </div>
                     </div>
-                    <div className="mt-3 text-center w-full">
-                        <div className="badge badge-secondary rounded-xl md:badge-xl text-md md:text-2xl font-semibold drop-shadow-lg px-4 py-4 w-[200px] md:w-[300px]"> 
+                    <div className="mt-1 sm:mt-2 md:mt-3 w-full">
+                        <div className="badge badge-secondary rounded-md text-xs sm:text-sm md:text-lg font-medium px-2 py-1 sm:px-3 sm:py-2 w-full max-w-[140px] sm:max-w-[180px] md:max-w-full"> 
                             Full-Length Interviews
                         </div>
                     </div>
                 </div>
 
                 <div data-aos="fade-left" className="flex flex-col items-center">
-                    <div className="relative flex justify-center w-full">
-                        <div className="group relative w-[200px] md:w-[300px]">
-                            <div className="bg-accent p-4 md:p-5 rounded-xl w-full">
-                                <Link to="/"><img 
+                    <div className="relative w-full max-w-[140px] sm:max-w-[180px] md:max-w-full">
+                        <div className="bg-accent p-2 sm:p-3 md:p-4 rounded-lg w-full">
+                            <Link to="/">
+                                <img 
                                     src={Fist} 
                                     alt="Student Activism" 
-                                    className='w-full h-[150px] md:h-[250px] rounded-xl shadow-2xl hover:scale-107 duration-300 transition-transform object-cover'
-                                /></Link>
-                            </div>
+                                    className='w-full h-[100px] sm:h-[120px] md:h-[180px] lg:h-[250px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
+                                />
+                            </Link>
                         </div>
                     </div>
-                    <div className="mt-3 text-center w-full">
-                        <div className="badge badge-accent rounded-xl md:badge-xl text-md md:text-2xl font-semibold drop-shadow-lg px-4 py-4 w-[200px] md:w-[300px]"> 
+                    <div className="mt-1 sm:mt-2 md:mt-3 w-full">
+                        <div className="badge badge-accent rounded-md text-xs sm:text-sm md:text-lg font-medium px-2 py-1 sm:px-3 sm:py-2 w-full max-w-[140px] sm:max-w-[180px] md:max-w-full"> 
                             SMC Student Activism
                         </div>
                     </div>
