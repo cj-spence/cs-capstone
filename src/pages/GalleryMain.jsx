@@ -1,14 +1,13 @@
-import Herman from '../assets/herman.png'
 import HermanMusheer from '../assets/hermanandmusheer.png'
 import Fist from '../assets/fist.jpg'
-import StudentActivism from '../assets/studentactivism.png'
+import Campus from '../assets/smc1970.png'
 import { Link } from 'react-router-dom';
 
 export const GalleryMain = () => {
     return (
         <section id="/gallery" className="h-screen flex flex-col items-center justify-center text-center relative pt-24 pb-16 md:py-24 lg:py-70 overflow-hidden">
 
-            <div className="mb-6 text-xl font-bold">
+            <div data-aos="fade" className="mb-6 text-lg md:text-2xl font-bold">
                 Click the pictures below to check out the galleries.
             </div>
 
@@ -16,56 +15,56 @@ export const GalleryMain = () => {
 
                 <div data-aos="fade-right" className="flex flex-col items-center">
                     <div className="relative flex justify-center w-full">
-                        <div className="group relative w-[250px] md:w-[300px]">
+                        <div className="group relative w-[200px] md:w-[300px]">
                             <div className="bg-accent p-4 md:p-5 rounded-xl w-full">
                                 <Link to="/"><img 
-                                    src={HermanMusheer} 
-                                    alt="Herman and Musheer" 
-                                    className='w-full h-[200px] md:h-[250px] rounded-xl shadow-2xl hover:scale-107 duration-300 transition-transform object-cover'
+                                    src={Campus} 
+                                    alt="Saint Mary's Campus 1970" 
+                                    className='w-full h-[150px] md:h-[250px] rounded-xl shadow-2xl hover:scale-107 duration-300 transition-transform object-cover'
                                 /></Link>
                             </div>
                         </div>
                     </div>
                     <div className="mt-3 text-center w-full">
-                        <div className="badge badge-accent rounded-xl md:badge-xl text-xl md:text-2xl font-semibold drop-shadow-lg px-4 py-4 w-[250px] md:w-[300px]"> 
-                            Herman and Musheer
+                        <div className="badge badge-accent rounded-xl md:badge-xl text-md md:text-2xl font-semibold drop-shadow-lg px-4 py-4 w-[200px] md:w-[300px]"> 
+                            Saint Mary's in the '70s
                         </div>
                     </div>
                 </div>
 
                 <div data-aos="fade" className="flex flex-col items-center">
                     <div className="relative flex justify-center w-full">
-                        <div className="group relative w-[250px] md:w-[300px]">
+                        <div className="group relative w-[200px] md:w-[300px]">
                             <div className="bg-secondary p-4 md:p-5 rounded-xl w-full">
                                 <Link to="/"><img 
-                                    src={Fist} 
+                                    src={HermanMusheer} 
                                     alt="Black Resistance" 
-                                    className='w-full h-[200px] md:h-[250px] rounded-xl shadow-2xl hover:scale-107 duration-300 transition-transform object-cover'
+                                    className='w-full h-[150px] md:h-[250px] rounded-xl shadow-2xl hover:scale-107 duration-300 transition-transform object-cover'
                                 /></Link>
                             </div>
                         </div>
                     </div>
                     <div className="mt-3 text-center w-full">
-                        <div className="badge badge-secondary rounded-xl md:badge-xl text-xl md:text-2xl font-semibold drop-shadow-lg px-4 py-4 w-[250px] md:w-[300px]"> 
-                            Saint Mary's in the '70s
+                        <div className="badge badge-secondary rounded-xl md:badge-xl text-md md:text-2xl font-semibold drop-shadow-lg px-4 py-4 w-[200px] md:w-[300px]"> 
+                            Full-Length Interviews
                         </div>
                     </div>
                 </div>
 
                 <div data-aos="fade-left" className="flex flex-col items-center">
                     <div className="relative flex justify-center w-full">
-                        <div className="group relative w-[250px] md:w-[300px]">
+                        <div className="group relative w-[200px] md:w-[300px]">
                             <div className="bg-accent p-4 md:p-5 rounded-xl w-full">
                                 <Link to="/"><img 
-                                    src={StudentActivism} 
+                                    src={Fist} 
                                     alt="Student Activism" 
-                                    className='w-full h-[200px] md:h-[250px] rounded-xl shadow-2xl hover:scale-107 duration-300 transition-transform object-cover'
+                                    className='w-full h-[150px] md:h-[250px] rounded-xl shadow-2xl hover:scale-107 duration-300 transition-transform object-cover'
                                 /></Link>
                             </div>
                         </div>
                     </div>
                     <div className="mt-3 text-center w-full">
-                        <div className="badge badge-accent rounded-xl md:badge-xl text-xl md:text-2xl font-semibold drop-shadow-lg px-4 py-4 w-[250px] md:w-[300px]"> 
+                        <div className="badge badge-accent rounded-xl md:badge-xl text-md md:text-2xl font-semibold drop-shadow-lg px-4 py-4 w-[200px] md:w-[300px]"> 
                             SMC Student Activism
                         </div>
                     </div>
