@@ -20,13 +20,13 @@ export const GalleryMain = () => {
                                 <img 
                                     src={Campus} 
                                     alt="Saint Mary's Campus 1970" 
-                                    className='w-full h-[120px] sm:h-[140px] md:h-[180px] lg:h-[250px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
+                                    className='w-full h-[120px] sm:h-[140px] md:h-[180px] lg:h-[250px] xl:h-[300px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
                                 />
                             </Link>
                         </div>
                     </div>
                     <div className="mt-1 sm:mt-2 md:mt-3 w-full">
-                        <div className="badge badge-accent rounded-md text-xs sm:text-sm md:text-lg font-medium md:font-semibold px-2 py-1 sm:px-3 sm:py-2 w-full max-w-[160px] sm:max-w-[180px] md:max-w-full"> 
+                        <div className="badge badge-accent rounded-md text-xs sm:text-sm md:text-md lg:text-lg font-medium md:font-semibold px-2 py-1 sm:px-3 sm:py-2 w-full max-w-[160px] sm:max-w-[180px] md:max-w-full"> 
                             Saint Mary's in the '70s
                         </div>
                     </div>
@@ -35,17 +35,17 @@ export const GalleryMain = () => {
                 <div data-aos="fade" className="flex flex-col items-center">
                     <div className="relative w-full max-w-[170px] sm:max-w-[180px] md:max-w-full">
                         <div className="bg-secondary p-2 sm:p-3 md:p-4 rounded-lg w-full">
-                            <Link to="/interviews">
+                            <Link to="/gallery/interviews">
                                 <img 
                                     src={HermanMusheer} 
                                     alt="Black Resistance" 
-                                    className='w-full h-[120px] sm:h-[140px] md:h-[180px] lg:h-[250px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
+                                    className='w-full h-[120px] sm:h-[140px] md:h-[180px] lg:h-[250px] xl:h-[300px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
                                 />
                             </Link>
                         </div>
                     </div>
                     <div className="mt-1 sm:mt-2 md:mt-3 w-full">
-                        <div className="badge badge-secondary rounded-md text-xs sm:text-sm md:text-lg font-medium md:font-semibold px-2 py-1 sm:px-3 sm:py-2 w-full max-w-[160px] sm:max-w-[180px] md:max-w-full"> 
+                        <div className="badge badge-secondary rounded-md text-xs sm:text-sm md:text-md lg:text-lg font-medium md:font-semibold px-2 py-1 sm:px-3 sm:py-2 w-full max-w-[160px] sm:max-w-[180px] md:max-w-full"> 
                             Full-Length Interviews
                         </div>
                     </div>
@@ -58,13 +58,13 @@ export const GalleryMain = () => {
                                 <img 
                                     src={Fist} 
                                     alt="Student Activism" 
-                                    className='w-full h-[120px] sm:h-[140px] md:h-[180px] lg:h-[250px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
+                                    className='w-full h-[120px] sm:h-[140px] md:h-[180px] lg:h-[250px] xl:h-[300px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
                                 />
                             </Link>
                         </div>
                     </div>
                     <div className="mt-1 sm:mt-2 md:mt-3 w-full">
-                        <div className="badge badge-accent rounded-md text-xs sm:text-sm md:text-lg font-medium md:font-semibold px-2 py-1 sm:px-3 sm:py-2 w-full max-w-[160px] sm:max-w-[180px] md:max-w-full"> 
+                        <div className="badge badge-accent rounded-md text-xs sm:text-sm md:text-md lg:text-lg font-medium md:font-semibold px-2 py-1 sm:px-3 sm:py-2 w-full max-w-[160px] sm:max-w-[180px] md:max-w-full"> 
                             SMC Student Activism
                         </div>
                     </div>

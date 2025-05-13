@@ -38,7 +38,7 @@ export const Introduction = () => {
                     <img 
                       src={Musheer} 
                       alt="Musheer" 
-                      className='mask mask-squircle w-md h-md object-cover'
+                      className='mask mask-squircle w-full h-full object-cover'
                     />
                   </div>
                   <div className="hidden md:block absolute bottom-full right-1/2 md:right-0 translate-x-1/2 md:translate-x-0 mb-2 opacity-0 sm:opacity-0 sm:group-hover:opacity-100 group-hover:opacity-100 transition-opacity duration-500 w-[90vw] md:w-fit max-w-[300px] md:max-w-3xl pointer-events-none">

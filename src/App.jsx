@@ -34,13 +34,22 @@ function Home() {
   );
 }
 
+function GalleryPaths() {
+  return (
+    <Routes>
+      <Route index element={<GalleryMain />} />
+      <Route path="/interviews" element={<Interviews />} />
+    </Routes>
+  );
+}
+
 function App() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out',
-      once: false,
-      mirror: true,
+      once: true,
+      mirror: false,
       offset: 300,
       anchorPlacement: 'top-bottom',
     });
@@ -61,8 +70,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/gallery" element={<GalleryMain />} />
-        <Route path="/interviews" element={<Interviews />} />
+        <Route path="/gallery/*" element={<GalleryPaths />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>
