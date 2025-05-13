@@ -10,7 +10,7 @@ export const Landing = () => {
                     <h2 className="text-2xl md:text-4xl mb-10">
                         This is a collection of stories, memories, and media of{' '}
                         <span className="text-secondary text-shadow-sm">Herman Brown</span> and{' '}
-                        <span className="text-secondary text-shadow-sm">Musheer Abdul-Jabbar</span>.
+                        <span className="text-secondary text-shadow-sm">Musheer Abdul-Jabbaar</span>.
                     </h2>
 
                     <div className="text-black justify-center items-center mt-16 md:mt-24 lg:mt-40">
