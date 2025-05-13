@@ -98,13 +98,13 @@ export const GalleryInterviews = () => {
                         <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between z-10 pointer-events-none">
                         <a 
                             href={`#slide${index === 0 ? videos.length : index}`} 
-                            className="btn btn-circle text-xs md:text-lg w-7 h-7 md:w-12 md:h-12 pointer-events-auto"
+                            className="btn btn-circle btn-secondary text-xs md:text-lg w-7 h-7 md:w-12 md:h-12 pointer-events-auto"
                         >
                             ❮
                         </a>
                         <a 
                             href={`#slide${index === videos.length - 1 ? 1 : index + 2}`} 
-                            className="btn btn-circle text-xs md:text-lg w-7 h-7 md:w-12 md:h-12 pointer-events-auto"
+                            className="btn btn-circle btn-secondary text-xs md:text-lg w-7 h-7 md:w-12 md:h-12 pointer-events-auto"
                         >
                             ❯
                         </a>

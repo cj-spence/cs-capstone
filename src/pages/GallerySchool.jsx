@@ -29,8 +29,8 @@ export const GallerySchool = () => {
                                     className="w-full object-cover h-[60vh]"
                                 />
                                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                    <a href="#item5" className="btn btn-circle btn-secondary">❮</a>
-                                    <a href="#item2" className="btn btn-circle btn-secondary">❯</a>
+                                    <a href="#item5" className="btn btn-circle btn-secondary w-7 h-7 md:w-12 md:h-12">❮</a>
+                                    <a href="#item2" className="btn btn-circle btn-secondary w-7 h-7 md:w-12 md:h-12">❯</a>
                                 </div>
                                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                                     <h2 className="text-xl md:text-3xl font-bold text-white">1970s Campus Life</h2>
@@ -46,8 +46,8 @@ export const GallerySchool = () => {
                                     className="w-full object-cover h-[60vh]"
                                 />
                                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                    <a href="#item1" className="btn btn-circle btn-secondary">❮</a>
-                                    <a href="#item3" className="btn btn-circle btn-secondary">❯</a>
+                                    <a href="#item1" className="btn btn-circle btn-secondary w-7 h-7 md:w-12 md:h-12">❮</a>
+                                    <a href="#item3" className="btn btn-circle btn-secondary w-7 h-7 md:w-12 md:h-12">❯</a>
                                 </div>
                                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                                     <h2 className="text-xl md:text-3xl font-bold text-white">St. Albert Hall Library, 1970</h2>
@@ -63,8 +63,8 @@ export const GallerySchool = () => {
                                     className="w-full object-cover h-[60vh]"
                                 />
                                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                    <a href="#item2" className="btn btn-circle btn-secondary">❮</a>
-                                    <a href="#item4" className="btn btn-circle btn-secondary">❯</a>
+                                    <a href="#item2" className="btn btn-circle btn-secondary w-7 h-7 md:w-12 md:h-12">❮</a>
+                                    <a href="#item4" className="btn btn-circle btn-secondary w-7 h-7 md:w-12 md:h-12">❯</a>
                                 </div>
                                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                                     <h2 className="text-xl md:text-3xl font-bold text-white">St. Albert Hall Library Quad, 1970</h2>
@@ -80,8 +80,8 @@ export const GallerySchool = () => {
                                     className="w-full object-cover h-[60vh]"
                                 />
                                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                    <a href="#item3" className="btn btn-circle btn-secondary">❮</a>
-                                    <a href="#item5" className="btn btn-circle btn-secondary">❯</a>
+                                    <a href="#item3" className="btn btn-circle btn-secondary w-7 h-7 md:w-12 md:h-12">❮</a>
+                                    <a href="#item5" className="btn btn-circle btn-secondary w-7 h-7 md:w-12 md:h-12">❯</a>
                                 </div>
                                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                                     <h2 className="text-xl md:text-3xl font-bold text-white">Philosophy Seminar, 1970</h2>
@@ -97,8 +97,8 @@ export const GallerySchool = () => {
                                     className="w-full object-cover h-[60vh]"
                                 />
                                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                    <a href="#item4" className="btn btn-circle btn-secondary">❮</a>
-                                    <a href="#item1" className="btn btn-circle btn-secondary">❯</a>
+                                    <a href="#item4" className="btn btn-circle btn-secondary w-7 h-7 md:w-12 md:h-12">❮</a>
+                                    <a href="#item1" className="btn btn-circle btn-secondary w-7 h-7 md:w-12 md:h-12">❯</a>
                                 </div>
                                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                                     <h2 className="text-xl md:text-3xl font-bold text-white"></h2>
