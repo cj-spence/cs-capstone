@@ -7,7 +7,8 @@ import { Timeline2 } from './pages/Timeline2'
 import { Timeline3 } from './pages/Timeline3'
 import { Timeline4 } from './pages/Timeline4'
 import { GalleryMain } from './pages/GalleryMain'
-import { Interviews } from './pages/Interviews'
+import { GalleryInterviews } from './pages/GalleryInterviews'
+import { GallerySchool } from './pages/GallerySchool'
 import { NoPage } from './pages/NoPage'
 import { Outro } from './pages/Outro'
 import { Navbar } from './components/Navbar'
@@ -38,7 +39,8 @@ function GalleryPaths() {
   return (
     <Routes>
       <Route index element={<GalleryMain />} />
-      <Route path="/interviews" element={<Interviews />} />
+      <Route path="/interviews" element={<GalleryInterviews />} />
+      <Route path="/saintmarys" element={<GallerySchool />} />
     </Routes>
   );
 }
