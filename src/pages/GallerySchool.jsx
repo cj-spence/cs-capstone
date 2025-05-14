@@ -119,7 +119,7 @@ export const GallerySchool = () => {
 
     <div className="p-4 bg-secondary rounded-xl">
         <div className="p-4 bg-accent rounded-xl">
-            <div className="w-full max-w-screen-lg mx-auto">
+            <div className="w-full max-w-screen-md mx-auto">
                 <div className="carousel w-full rounded-box shadow-xl">
                     {galleryItems.map((item, index) => (
                         <div
@@ -130,7 +130,7 @@ export const GallerySchool = () => {
                             <img
                                 src={item.image}
                                 alt={item.alt}
-                                className="w-full object-cover h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh]"
+                                className="w-full object-cover h-[40vh] sm:h-[50vh]"
                             />
                             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                                 <a

@@ -69,7 +69,7 @@ export const GalleryInterviews = () => {
                 </div>
             </div>
 
-            <div className='w-full max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl mt-6'>
+            <div className='w-full max-w-screen-sm mt-6'>
                 <div className='p-2 md:p-4 bg-secondary rounded-xl'>
                     <div className='p-2 md:p-4 bg-accent rounded-lg'>
                         <div 
