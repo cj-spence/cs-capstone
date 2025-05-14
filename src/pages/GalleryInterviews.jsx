@@ -8,9 +8,9 @@ export const GalleryInterviews = () => {
         width: '100%',
         playerVars: {
             autoplay: 0,
-            modestbranding: 1,
+            modestbranding: 0,
             rel: 0,
-            fs: 1,
+            fs: 0,
             iv_load_policy: 3,
             disablekb: 1,
             playsinline: 1,
@@ -87,7 +87,7 @@ export const GalleryInterviews = () => {
                     >
                         <div className="aspect-video w-full rounded-xl h-full overflow-hidden z-0 bg-black">
                         <iframe
-                            src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=0&modestbranding=1&rel=0&iv_load_policy=3&fs=0`}
+                            src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=0&modestbranding=1&rel=0&iv_load_policy=3&fs=1`}
                             className="w-full h-full"
                             loading="lazy"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
