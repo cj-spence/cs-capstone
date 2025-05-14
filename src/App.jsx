@@ -9,6 +9,7 @@ import { Timeline4 } from './pages/Timeline4'
 import { GalleryMain } from './pages/GalleryMain'
 import { GalleryInterviews } from './pages/GalleryInterviews'
 import { GallerySchool } from './pages/GallerySchool'
+import { GalleryActivism } from './pages/GalleryActivism'
 import { NoPage } from './pages/NoPage'
 import { Outro } from './pages/Outro'
 import { Navbar } from './components/Navbar'
@@ -41,6 +42,7 @@ function GalleryPaths() {
       <Route index element={<GalleryMain />} />
       <Route path="/interviews" element={<GalleryInterviews />} />
       <Route path="/saintmarys" element={<GallerySchool />} />
+      <Route path="/activism" element={<GalleryActivism />} />
     </Routes>
   );
 }

@@ -62,14 +62,14 @@ export const GalleryInterviews = () => {
     ];
 
     return (
-        <section id="/interviews" data-aos="fade" className="h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden">
+        <section id="/interviews" data-aos="fade" className="h-screen flex flex-col items-center justify-center text-center relative overflow-hidden">
             <div className='p-4 bg-secondary rounded-xl px-2 py-2'>
                 <div className='p-4 bg-accent rounded-xl px-4 py-3 text-xl font-semibold'>
                     Full Length Interviews
                 </div>
             </div>
 
-            <div className='sm:px-2 w-full max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mt-10'>
+            <div className='px-2 w-full sm:max-w-sm md:max-w-2xl lg:max-w-3xl mt-5'>
             <div className='p-2 md:p-4 bg-secondary rounded-xl'>
                 <div className='p-2 md:p-4 bg-accent rounded-lg'>
                 <div 
@@ -85,7 +85,7 @@ export const GalleryInterviews = () => {
                         key={video.id} 
                         className="carousel-item relative w-full"
                     >
-                        <div className="w-full h-full aspect-video overflow-hidden z-0 bg-black">
+                        <div className="aspect-video w-full rounded-xl h-full overflow-hidden z-0 bg-black">
                         <iframe
                             src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=0&modestbranding=1&rel=0&iv_load_policy=3&fs=0`}
                             className="w-full h-full"
@@ -116,7 +116,7 @@ export const GalleryInterviews = () => {
             </div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-4 justify-center w-full max-w-sm md:max-w-2xl mt-10">
+            <div className="flex flex-col md:flex-row gap-4 px-2 justify-center w-full max-w-sm md:max-w-2xl mt-10">
                 <Link to="/gallery" className="btn btn-accent">
                     Back to Main Gallery
                 </Link>

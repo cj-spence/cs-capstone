@@ -6,13 +6,13 @@ import sem from '../assets/smcav00634.JPG'
 import classtime from '../assets/smcav03055.JPG'
 
 
-export const GallerySchool = () => {
+export const GalleryActivism = () => {
     return (
-        <section id="/saintmarys" data-aos="fade" className="min-h-screen flex flex-col items-center justify-center p-4 bg-base-100">
+        <section id="/activism" data-aos="fade" className="min-h-screen flex flex-col items-center justify-center p-4 bg-base-100">
 
             <div className='p-4 bg-secondary rounded-xl px-2 py-2'>
                 <div className='p-4 bg-accent rounded-xl px-4 py-3 text-xl font-semibold'>
-                    Saint Mary's in the '70s
+                    Student Activism
                 </div>
             </div>
 

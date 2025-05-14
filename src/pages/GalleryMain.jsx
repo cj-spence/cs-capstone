@@ -54,7 +54,7 @@ export const GalleryMain = () => {
                 <div data-aos="fade-left" className="flex flex-col items-center">
                     <div className="relative w-full max-w-[170px] sm:max-w-[180px] md:max-w-full">
                         <div className="bg-accent p-2 sm:p-3 md:p-4 rounded-lg w-full">
-                            <Link to="/">
+                            <Link to="/gallery/activism">
                                 <img 
                                     src={Fist} 
                                     alt="Student Activism" 
@@ -64,8 +64,8 @@ export const GalleryMain = () => {
                         </div>
                     </div>
                     <div className="mt-1 sm:mt-2 md:mt-3 w-full">
-                        <div className="badge badge-warning rounded-md text-xs sm:text-sm md:text-md lg:text-xl font-medium md:font-semibold px-2 py-1 sm:px-3 sm:py-4 w-full max-w-[160px] sm:max-w-[180px] md:max-w-full"> 
-                            UNDER CONSTRUCTION
+                        <div className="badge badge-accent rounded-md text-xs sm:text-sm md:text-md lg:text-xl font-medium md:font-semibold px-2 py-1 sm:px-3 sm:py-4 w-full max-w-[160px] sm:max-w-[180px] md:max-w-full"> 
+                            Student Activism
                         </div>
                     </div>
                 </div>
