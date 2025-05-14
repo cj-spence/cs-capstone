@@ -8,9 +8,9 @@ export const GalleryInterviews = () => {
         width: '100%',
         playerVars: {
             autoplay: 0,
-            modestbranding: 0,
+            modestbranding: 1,
             rel: 0,
-            fs: 0,
+            fs: 1,
             iv_load_policy: 3,
             disablekb: 1,
             playsinline: 1,
@@ -62,61 +62,61 @@ export const GalleryInterviews = () => {
     ];
 
     return (
-        <section id="/interviews" data-aos="fade" className="h-screen flex flex-col items-center justify-center text-center relative overflow-hidden">
-            <div className='p-4 bg-secondary rounded-xl px-2 py-2'>
-                <div className='p-4 bg-accent rounded-xl px-4 py-3 text-xl font-semibold'>
+        <section id="/interviews" data-aos="fade" className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden px-4 py-10">
+            <div className='p-4 bg-secondary rounded-xl'>
+                <div className='p-4 bg-accent rounded-xl text-xl max-w-sm font-semibold'>
                     Full Length Interviews
                 </div>
             </div>
 
-            <div className='px-2 w-full sm:max-w-sm md:max-w-2xl lg:max-w-3xl mt-5'>
-            <div className='p-2 md:p-4 bg-secondary rounded-xl'>
-                <div className='p-2 md:p-4 bg-accent rounded-lg'>
-                <div 
-                    className="carousel"
-                    ref={carouselRef}
-                    onTouchStart={handleTouchStart}
-                    onTouchMove={handleTouchMove}
-                    onTouchEnd={handleTouchEnd}
-                >
-                    {videos.map((video, index) => (
-                    <div 
-                        id={`slide${index + 1}`} 
-                        key={video.id} 
-                        className="carousel-item relative w-full"
-                    >
-                        <div className="aspect-video w-full rounded-xl h-full overflow-hidden z-0 bg-black">
-                        <iframe
-                            src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=0&modestbranding=1&rel=0&iv_load_policy=3&fs=1`}
-                            className="w-full h-full"
-                            loading="lazy"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                        </div>
+            <div className='w-full max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl mt-6'>
+                <div className='p-2 md:p-4 bg-secondary rounded-xl'>
+                    <div className='p-2 md:p-4 bg-accent rounded-lg'>
+                        <div 
+                            className="carousel"
+                            ref={carouselRef}
+                            onTouchStart={handleTouchStart}
+                            onTouchMove={handleTouchMove}
+                            onTouchEnd={handleTouchEnd}
+                        >
+                            {videos.map((video, index) => (
+                                <div 
+                                    id={`slide${index + 1}`} 
+                                    key={video.id} 
+                                    className="carousel-item relative w-full"
+                                >
+                                    <div className="aspect-video w-full rounded-xl h-full overflow-hidden z-0 bg-black">
+                                        <iframe
+                                            src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=0&modestbranding=1&rel=0&iv_load_policy=3&fs=1`}
+                                            className="w-full h-full"
+                                            loading="lazy"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                        ></iframe>
+                                    </div>
 
-                        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between z-10 pointer-events-none">
-                        <a 
-                            href={`#slide${index === 0 ? videos.length : index}`} 
-                            className="btn btn-circle btn-secondary text-xs md:text-lg w-7 h-7 md:w-12 md:h-12 pointer-events-auto"
-                        >
-                            ❮
-                        </a>
-                        <a 
-                            href={`#slide${index === videos.length - 1 ? 1 : index + 2}`} 
-                            className="btn btn-circle btn-secondary text-xs md:text-lg w-7 h-7 md:w-12 md:h-12 pointer-events-auto"
-                        >
-                            ❯
-                        </a>
+                                    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between z-10 pointer-events-none">
+                                        <a 
+                                            href={`#slide${index === 0 ? videos.length : index}`} 
+                                            className="btn btn-circle btn-secondary text-xs md:text-lg w-7 h-7 md:w-12 md:h-12 pointer-events-auto"
+                                        >
+                                            ❮
+                                        </a>
+                                        <a 
+                                            href={`#slide${index === videos.length - 1 ? 1 : index + 2}`} 
+                                            className="btn btn-circle btn-secondary text-xs md:text-lg w-7 h-7 md:w-12 md:h-12 pointer-events-auto"
+                                        >
+                                            ❯
+                                        </a>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
-                    ))}
                 </div>
-                </div>
-            </div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-4 px-2 justify-center w-full max-w-sm md:max-w-2xl mt-10">
+            <div className="flex flex-col md:flex-row gap-4 justify-center w-full max-w-screen-md mt-10">
                 <Link to="/gallery" className="btn btn-accent">
                     Back to Main Gallery
                 </Link>
