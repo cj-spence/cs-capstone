@@ -14,6 +14,7 @@ import { NoPage } from './pages/NoPage'
 import { Outro } from './pages/Outro'
 import { Navbar } from './components/Navbar'
 import { About } from './pages/About'
+import { ScrollDown } from './components/ScrollDown'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import React, { useEffect } from 'react';
 import AOS from 'aos';

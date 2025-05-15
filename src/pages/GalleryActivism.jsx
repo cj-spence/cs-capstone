@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Augustine from '../assets/smcaii02157.JPG';
-import Albert from '../assets/smcaiii00348.JPG';
-import quad from '../assets/smcav00246.JPG';
-import sem from '../assets/smcav00634.JPG';
-import classtime from '../assets/smcav03055.JPG';
+import Augustine from '../assets/augustinehall1970.JPG';
+import Albert from '../assets/library1970.JPG';
+import quad from '../assets/quadfromchapel1975.JPG';
+import sem from '../assets/seminar1970.JPG';
+import classtime from '../assets/classroom1970.JPG';
 
 const galleryItems = [
   {

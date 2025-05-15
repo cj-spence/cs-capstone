@@ -1,6 +1,6 @@
 import HermanMusheer from '../assets/hermanandmusheer.png'
 import Fist from '../assets/fist.jpg'
-import Campus from '../assets/smc1970.png'
+import Campus from '../assets/chapelarcade.png'
 import { Link } from 'react-router-dom';
 
 export const GalleryMain = () => {
@@ -11,7 +11,7 @@ export const GalleryMain = () => {
         >
             <div 
                 data-aos="fade" 
-                className="mb-4 text-sm sm:text-base md:text-lg lg:text-2xl font-bold"
+                className="mb-2 md:mb-10 text-sm sm:text-base md:text-lg lg:text-2xl font-bold"
             >
                 Click the pictures below to check out the galleries.
             </div>
