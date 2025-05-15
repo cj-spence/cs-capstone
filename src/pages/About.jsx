@@ -10,7 +10,7 @@ export const About = () => {
 
             <div data-aos="fade" data-aos-duration="2000" className="flex flex-col items-center justify-center mx-auto px-4 text-center sm:px-6 w-full max-w-4xl">
             <h1 className="text-4xl md:text-7xl font-bold mb-6 drop-shadow-xl"> Made With Love </h1>
-            <div className="bg-secondary p-6 rounded-2xl max-w-3xl w-full">
+            <div className="bg-secondary p-6 rounded-2xl max-w-screen-sm lg:max-w-screen-lg w-full">
                 <div className="bg-accent p-6 rounded-xl space-y-6">
                 <h2 className="text-md md:text-xl font-medium">
                     This website was created in collaboration with Saint Mary's 

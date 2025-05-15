@@ -1,14 +1,12 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 import ReactPlayer from "react-player";
+import { ScrollDown } from "./ScrollDown";
 
 const HorizontalScroll = () => {
   return (
     <div className="">
-        <div className="text-center items-center justify-center font-bold text-2xl translate-y-30 drop-shadow-xl bg-secondary rounded-xl w-fit mx-auto px-3 py-3">
-            <div className="bg-accent rounded-xl py-3 px-3"> Early Life </div>
-        </div>
-        <HorizontalScrollVideo />
+      <HorizontalScrollVideo />
     </div>
   );
 };
@@ -23,10 +21,19 @@ const HorizontalScrollVideo = () => {
 
   const content = [
     {
+      type: "text",
+      id: 2,
+      title: "Early Life",
+      description: "Herman and Musheer's paths to Saint Mary's",
+      containerClasses: "",
+      textContainerClasses: "",
+      titleClasses: "",
+      descriptionClasses: ""
+    },
+    {
       type: "video",
       id: 1,
       url: "https://www.youtube.com/watch?v=sy-_mTMgZyA",
-      //
       containerClasses: "",
       innerClasses: ""
     },
@@ -35,7 +42,6 @@ const HorizontalScrollVideo = () => {
       id: 2,
       title: "Example Title",
       description: "This is some descriptive text between videos.",
-      //
       containerClasses: "",
       textContainerClasses: "",
       titleClasses: "",
@@ -53,7 +59,7 @@ const HorizontalScrollVideo = () => {
   ];
 
   return (
-    <section ref={targetRef} className="relative h-[300vh]">
+    <section ref={targetRef} className="relative h-[300vh] -mt-4">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div 
           style={{ x }}
@@ -77,9 +83,11 @@ const HorizontalScrollVideo = () => {
                   key={index} 
                   className={`p-4 bg-secondary rounded-xl flex-shrink-0 w-[700px] h-[400px] flex items-center justify-center ${item.containerClasses || ""}`}
                 >
-                  <div className={`text-center p-8 ${item.textContainerClasses || ""}`}>
-                    <h2 className={`text-3xl font-bold mb-4 ${item.titleClasses || ""}`}>{item.title}</h2>
-                    <p className={`text-xl ${item.descriptionClasses || ""}`}>{item.description}</p>
+                  <div className="w-full h-full bg-accent rounded-xl">
+                    <div className={`text-center h-full flex flex-col items-center justify-center p-8 ${item.textContainerClasses || ""}`}>
+                      <h2 className={`text-3xl font-bold mb-4 ${item.titleClasses || ""}`}>{item.title}</h2>
+                      <p className={`text-xl ${item.descriptionClasses || ""}`}>{item.description}</p>
+                    </div>
                   </div>
                 </div>
               );
@@ -103,6 +111,7 @@ const HorizontalScrollVideo = () => {
           })}
         </motion.div>
       </div>
+      <ScrollDown />
     </section>
   );
 };

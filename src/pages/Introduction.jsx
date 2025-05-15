@@ -1,5 +1,6 @@
 import Herman from '../assets/herman.png'
 import Musheer from '../assets/musheer.png'
+import { ScrollDown } from '../components/ScrollDown';
 
 export const Introduction = () => {
     return (
@@ -55,6 +56,20 @@ export const Introduction = () => {
                   Musheer Abdul-Jabbar
                 </div>
               </div>
+            </div>
+          </div>
+          <div data-aos="fade" className="p-3 bg-secondary rounded-xl mb-5">
+            <div className="p-3 bg-accent rounded-xl text-left font-medium max-w-screen-md mx-auto">
+              <div className='text-center text-xl font-bold'>
+                Herman, Musheer, and ES-201.
+              </div>
+              <div className='font-medium text-center mt-5'>
+                During Spring 2025, students from the course Ethnic Studies 201: Creating Community documented the oral histories of two Saint Mary’s College (SMC) alumni: Herman Brown and Musheer Abdul-Jabbaar (formerly Edward Badon). Herman and Musheer attended SMC from 1969-1974 and were active participants in the nationwide student movement that led to the establishment of Ethnic Studies.
+              </div>
+              <div className='items-center text-center text-md font-semibold mt-5'>
+                Scroll down to view their stories.
+              </div>
+
             </div>
           </div>
         </section>

@@ -21,7 +21,7 @@ export const Outro = () => {
                             Check out the other sections of the website below.
                         </h3>
 
-                        <div className="flex flex-col">
+                        <div className="flex flex-col items-center justify-center max-w-sm mx-auto">
                             <Link to="/gallery" className="btn mb-4"> Gallery </Link>
                             <Link to="/about" className="btn btn-xlqw"> About </Link>
                         </div>
