@@ -4,7 +4,7 @@ import { ScrollDown } from '../components/ScrollDown';
 
 export const Introduction = () => {
     return (
-        <section id="" className="min-h-screen flex flex-col items-center text-center justify-center relative px-4 overflow-hidden">
+        <section id="" className="min-h-[100vh] md:min-h-screen flex flex-col items-center text-center justify-center relative px-4 py-8 sm:py-10 md:py-16 overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl md:max-w-3xl lg:max-w-5xl mb-16">
             <div data-aos="fade-right" className="relative flex flex-col items-center md:items-start">
               <div className="relative flex justify-center md:justify-start drop-shadow-xl w-full">
