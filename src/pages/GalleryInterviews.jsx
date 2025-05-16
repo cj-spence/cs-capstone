@@ -115,7 +115,7 @@ export const GalleryInterviews = () => {
             </div>
 
 
-            <div className="flex flex-col md:flex-row gap-4 justify-center w-full max-w-screen-md mt-10">
+            <div className="flex flex-col md:flex-row gap-4 justify-center w-full max-w-screen-md mt-5">
                 <Link to="/gallery" className="btn btn-accent">
                     Back to Main Gallery
                 </Link>

@@ -6,7 +6,7 @@ import { SiDaisyui } from "react-icons/si";
 export const About = () => {
     
     return (
-        <section id="/about" className="min-h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden">
+        <section id="/about" className="h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden">
 
             <div data-aos="fade" data-aos-duration="2000" className="flex flex-col items-center justify-center mx-auto px-4 text-center sm:px-6 w-full max-w-4xl">
             <h1 className="text-4xl md:text-7xl font-bold mb-6 drop-shadow-xl"> Made With Love </h1>
