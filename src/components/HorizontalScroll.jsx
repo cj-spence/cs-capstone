@@ -2,6 +2,8 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import { ScrollDown } from "./ScrollDown";
+import ponchatoula from '../assets/ponchatoula.png'
+import hermanstown from '../assets/hermansproject.png'
 
 const HorizontalScrollVideo = () => {
   const targetRef = useRef(null);
@@ -12,12 +14,13 @@ const HorizontalScrollVideo = () => {
       type: "text",
       id: 2,
       title: "Early Life",
-      description: "Herman and Musheer's childhoods",
+      description: "Herman and Musheer's childhood stories.",
     },
     {
       type: "video",
       id: 1,
       url: "https://www.youtube.com/watch?v=CjEwONEXx-Q",
+      caption: "Herman disucssing his upbringing in the West Oakland projects.",
     },
     {
       type: "text",
@@ -28,7 +31,7 @@ const HorizontalScrollVideo = () => {
     {
       type: "image",
       id: 3,
-      url: "src/assets/hermansproject.png",
+      url: hermanstown,
       alt: "Herman's Hometown Project",
       caption: "Herman grew up in Cypress Village Housing Project, West Oakland, circa 1950s.",
     },
@@ -36,6 +39,7 @@ const HorizontalScrollVideo = () => {
       type: "video",
       id: 1,
       url: "https://www.youtube.com/watch?v=iy6T0nqaNNg",
+      caption: "Musheer talking about his time in the Jim Crow South.",
     },
     {
       type: "text",
@@ -46,7 +50,7 @@ const HorizontalScrollVideo = () => {
     {
       type: "image",
       id: 3,
-      url: "src/assets/ponchatoula.png",
+      url: ponchatoula,
       alt: "Musheer's Hometown",
       caption: "Ponchatoula, Louisiana - [1936]",
     }
@@ -108,6 +112,9 @@ const HorizontalScrollVideo = () => {
                 >
                   <div className="p-4 bg-accent rounded-xl">
                     <VideoPlayer url={item.url} />
+                    <p className="text-center text-md text-black mt-2">
+                      {item.caption}
+                    </p>
                   </div>
                 </div>
               );

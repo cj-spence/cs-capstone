@@ -24,7 +24,7 @@ export const GalleryMain = () => {
                                 <img 
                                     src={Campus} 
                                     alt="Saint Mary's Campus 1970" 
-                                    className='w-full h-[170px] sm:h-[180px] md:h-[210px] lg:h-[250px] xl:h-[300px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
+                                    className='w-full h-[150px] sm:h-[180px] md:h-[210px] lg:h-[250px] xl:h-[300px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
                                 />
                             </Link>
                         </div>
@@ -43,7 +43,7 @@ export const GalleryMain = () => {
                                 <img 
                                     src={HermanMusheer} 
                                     alt="Black Resistance" 
-                                    className='w-full h-[170px] sm:h-[180px] md:h-[210px] lg:h-[250px] xl:h-[300px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
+                                    className='w-full h-[150px] sm:h-[180px] md:h-[210px] lg:h-[250px] xl:h-[300px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
                                 />
                             </Link>
                         </div>
@@ -62,7 +62,7 @@ export const GalleryMain = () => {
                                 <img 
                                     src={Fist} 
                                     alt="Student Activism" 
-                                    className='w-full h-[170px] sm:h-[180px] md:h-[210px] lg:h-[250px] xl:h-[300px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
+                                    className='w-full h-[150px] sm:h-[180px] md:h-[210px] lg:h-[250px] xl:h-[300px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
                                 />
                             </Link>
                         </div>

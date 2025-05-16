@@ -2,6 +2,8 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import { ScrollDown } from "./ScrollDown";
+import marypleasant1 from '../assets/marypleasant.jpg'
+import marypleasant2 from '../assets/marypleasant2.jpg'
 
 const HorizontalScrollVideo = () => {
   const targetRef = useRef(null);
@@ -23,7 +25,8 @@ const HorizontalScrollVideo = () => {
     {
       type: "video",
       id: 1,
-      url: "https://www.youtube.com/watch?v=CjEwONEXx-Q",
+      url: "https://www.youtube.com/watch?v=256hxAds2pc",
+      caption: "Herman discussing the honoring of Mary Pleasant.",
     },
     {
       type: "text",
@@ -34,14 +37,15 @@ const HorizontalScrollVideo = () => {
     {
       type: "image",
       id: 3,
-      url: "src/assets/marypleasant.jpg",
+      url: marypleasant1,
       alt: "Mary Ellen Pleasant",
       caption: "Mary Pleasant was California’s first Black millionaire, a key figure in the California Civil Rights movement, and an early donor to SMC.",
     },
     {
       type: "video",
       id: 1,
-      url: "https://www.youtube.com/watch?v=iy6T0nqaNNg",
+      url: "https://www.youtube.com/watch?v=98Fmk96C1Q4",
+      caption: "Musheer discussing the honoring of Mary Pleasant.",
     },
     {
       type: "text",
@@ -52,15 +56,9 @@ const HorizontalScrollVideo = () => {
     {
       type: "image",
       id: 3,
-      url: "src/assets/marypleasant2.jpg",
+      url: marypleasant2,
       alt: "Mary Ellen Pleasant 2",
       caption: "Pleasant, a light-skinned Black woman often passed as white to avoid recapture back into slavery.",
-    },
-    {
-      type: "text",
-      id: 2,
-      title: "Why isn't she recognized?",
-      description: "She secretly funded abolitionist causes, including John Brown’s raid, and later helped desegregate San Francisco’s streetcars. She made donations to support the founding of Saint Mary’s College of California."
     },
   ];
 
@@ -120,6 +118,9 @@ const HorizontalScrollVideo = () => {
                 >
                   <div className="p-4 bg-accent rounded-xl">
                     <VideoPlayer url={item.url} />
+                    <p className="text-center text-md text-black mt-2">
+                      {item.caption}
+                    </p>
                   </div>
                 </div>
               );

@@ -6,7 +6,7 @@ export const Outro = () => {
     return (
         <section id="" data-aos="fade" className="min-h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden">
 
-            <div className="flex flex-col items-center justify-center mx-auto px-4 text-center sm:px-6 w-full max-w-4xl">
+            <div className="h-screen flex flex-col items-center justify-center mx-auto px-4 text-center sm:px-6 w-full max-w-4xl">
                 <TypeAnimation 
                         sequence={[
                             "Thank you.",

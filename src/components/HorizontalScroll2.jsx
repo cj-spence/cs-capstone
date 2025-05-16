@@ -2,6 +2,8 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import { ScrollDown } from "./ScrollDown";
+import musheerhermannathan from '../assets/musheerhermannathan.jpg'
+import hermanandmusheer from '../assets/hermanandmusheer2.png'
 
 const HorizontalScrollVideo = () => {
   const targetRef = useRef(null);
@@ -29,7 +31,7 @@ const HorizontalScrollVideo = () => {
     {
       type: "image",
       id: 3,
-      url: "src/assets/musheerhermannathan.jpg",
+      url: musheerhermannathan,
       alt: "Nate, Herman, Musheer",
       caption: "Nate Carroll, Herman Brown, and Musheer Abdul-Jabbar.",
     },
@@ -48,7 +50,7 @@ const HorizontalScrollVideo = () => {
     {
       type: "image",
       id: 3,
-      url: "src/assets/hermanandmusheer2.png",
+      url: hermanandmusheer,
       alt: "Musheer's Hometown",
       caption: "Herman Brown and Musher Abdul-Jabbaar at SMC.",
     }

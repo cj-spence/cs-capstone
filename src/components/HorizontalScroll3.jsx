@@ -2,6 +2,8 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import { ScrollDown } from "./ScrollDown";
+import bsudemands from '../assets/bsudemands.png'
+import chapeloccupation from '../assets/chapeloccupation.png'
 
 const HorizontalScrollVideo = () => {
   const targetRef = useRef(null);
@@ -29,7 +31,7 @@ const HorizontalScrollVideo = () => {
     {
       type: "image",
       id: 3,
-      url: "src/assets/bsudemands.png",
+      url: bsudemands,
       alt: "11 BSU Demands",
       caption: "The letter written to SMC Administration with 11 demands from the Black Student Union.\n\n(full size available in the gallery)",
     },
@@ -48,7 +50,7 @@ const HorizontalScrollVideo = () => {
     {
       type: "image",
       id: 3,
-      url: "src/assets/chapeloccupation.png",
+      url: chapeloccupation,
       alt: "Chapel Occupation",
       caption: "In the aftermath of the basketball team walkout, BSU and MEChA student activists fasted and slept in the Chapel pews for several days in response to the potential elimination of Chicano Studies courses.",
     }
