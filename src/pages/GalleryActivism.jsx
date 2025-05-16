@@ -60,8 +60,8 @@ const galleryItems = [
   },
   {
     image: leadersofmecha,
-    alt: "Leaders of MECha, [1972]",
-    title: "Leaders of MECha, [1972]",
+    alt: "Leaders of MEChA, [1972]",
+    title: "Leaders of MEChA, [1972]",
     desc: "Alex Contereras, unknown, and Carlos Reyes were leaders of MECha, a student-group fighting for solidarity."
   },
   {
@@ -92,7 +92,7 @@ const galleryItems = [
     image: bsuleaders,
     alt: "BSU Leader Musheer",
     title: "BSU Leader Musheer",
-    desc: "Musheer Abdul-Jabbaar (formally Edward Badon), a co-founder of BSU at is Catholic High School in L.A."
+    desc: "Musheer Abdul-Jabbaar (formally Edward Badon), a co-founder of BSU at his Catholic High School in L.A."
   },
   {
     image: fist,

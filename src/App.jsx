@@ -13,6 +13,9 @@ import { Timeline1 } from './pages/Timeline1';
 import { Timeline2 } from './pages/Timeline2';
 import { Timeline3 } from './pages/Timeline3';
 import { Timeline4 } from './pages/Timeline4';
+import { Transition1 } from './pages/Transition1';
+import { Transition2 } from './pages/Transition2';
+import { Transition3 } from './pages/Transition3';
 import { GalleryMain } from './pages/GalleryMain';
 import { GalleryInterviews } from './pages/GalleryInterviews';
 import { GallerySchool } from './pages/GallerySchool';
@@ -29,11 +32,11 @@ function Home() {
       <Landing />
       <Introduction />
       <Timeline1 />
-      <About />
+      <Transition1 />
       <Timeline2 />
-      <About />
+      <Transition2 />
       <Timeline3 />
-      <About />
+      <Transition3 />
       <Timeline4 />
       <Outro />
     </>

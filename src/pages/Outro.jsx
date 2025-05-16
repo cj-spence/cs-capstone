@@ -4,7 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 export const Outro = () => {
     
     return (
-        <section id="/about" data-aos="fade" className="h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden">
+        <section id="" data-aos="fade" className="min-h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden">
 
             <div className="flex flex-col items-center justify-center mx-auto px-4 text-center sm:px-6 w-full max-w-4xl">
                 <TypeAnimation 
@@ -51,8 +51,8 @@ export const Outro = () => {
                             Though this chapter of Herman and Musheer's story closes, their work to secure Mary Pleasant's rightful place in history persists through their continued activism with Saint Mary's alumni.
                         </h2>
 
-                        <h2 className="text-md md:text-xl font-semibold text-center">
-                            " My ancestors gave me an assignment. They said, 'struggle until you are free'. " <br /> - Musheer Abdul-Jabbaar
+                        <h2 className="text-md md:text-lg font-medium mt-10">
+                            Want to learn more? Visit the gallery to see full-length interviews, student-activism that Herman and Musheer participated in, and what campus life was like in the '70s.
                         </h2>
 
                         </div>

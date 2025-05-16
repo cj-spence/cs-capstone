@@ -1,108 +1,150 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import { ScrollDown } from "./ScrollDown";
 
-const HorizontalScroll2 = () => {
-  return (
-    <div className="">
-      <HorizontalScrollVideo />
-    </div>
-  );
-};
-
 const HorizontalScrollVideo = () => {
   const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
-
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const { scrollYProgress } = useScroll({ target: targetRef });
 
   const content = [
     {
       type: "text",
       id: 2,
       title: "Experience at Saint Mary's",
-      description: "Herman and Musheer's paths to Saint Mary's",
-      containerClasses: "",
-      textContainerClasses: "",
-      titleClasses: "",
-      descriptionClasses: ""
+      description: "Herman and Musheer's paths to SMC, experience on campus, and what they learned.",
     },
     {
       type: "video",
       id: 1,
-      url: "https://www.youtube.com/watch?v=sy-_mTMgZyA",
-      containerClasses: "",
-      innerClasses: ""
+      url: "https://www.youtube.com/watch?v=cokUQ-cvtj8",
+      caption: "Herman explaining his path to SMC.",
     },
     {
       type: "text",
       id: 2,
-      title: "Example Title",
-      description: "This is some descriptive text between videos.",
-      containerClasses: "",
-      textContainerClasses: "",
-      titleClasses: "",
-      descriptionClasses: ""
+      title: "Herman's Path to SMC",
+      description: "A product of Oakland public schools, Herman developed a love for basketball and became a highly regarded recruit. In 1969, Herman followed his older brother, Roy Brown, and enrolled at SMC. ",
     },
     {
       type: "image",
       id: 3,
-      url: "https://drive.google.com/file/d/11DcDDdBBS_dEtu_ttKqS8JR-NJvA72QB/view?usp=sharing",
-      alt: "Random image",
-      containerClasses: "",
-      innerClasses: "",
-      imageClasses: ""
+      url: "src/assets/musheerhermannathan.jpg",
+      alt: "Nate, Herman, Musheer",
+      caption: "Nate Carroll, Herman Brown, and Musheer Abdul-Jabbar.",
     },
+    {
+      type: "video",
+      id: 1,
+      url: "https://www.youtube.com/watch?v=5yd8HN6S_jA",
+      caption: "Musheer explaining his path to SMC.",
+    },
+    {
+      type: "text",
+      id: 2,
+      title: "Musheer's Path and First Event at SMC",
+      description: "Before choosing to attend SMC, Musheer co-founded the first BSU at his Catholic High School and decided to attend SMC with a revolutionary vision.",
+    },
+    {
+      type: "image",
+      id: 3,
+      url: "src/assets/hermanandmusheer2.png",
+      alt: "Musheer's Hometown",
+      caption: "Herman Brown and Musher Abdul-Jabbaar at SMC.",
+    }
   ];
 
+  const cardWidth = 760;
+  const cardPadding = 32;
+  const gapBetweenCards = 20;
+
+
+  const scrollWidth =
+    content.length * (cardWidth + cardPadding + gapBetweenCards);
+
+  const [sectionHeight, setSectionHeight] = useState(0);
+
+  useEffect(() => {
+
+    const onResize = () => {
+      const viewportHeight = window.innerHeight;
+      const viewportWidth = window.innerWidth;
+      const extraHeight = scrollWidth - viewportWidth;
+      setSectionHeight(viewportHeight + extraHeight);
+    };
+    onResize();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [scrollWidth]);
+
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => setViewportWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const x = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, -scrollWidth + viewportWidth]
+  );
+
   return (
-    <section ref={targetRef} className="relative h-[300vh] -mt-4">
+    <section
+      ref={targetRef}
+      style={{ height: `${sectionHeight}px` }}
+      className="relative -mt-4"
+    >
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div 
-          style={{ x }}
+        <motion.div
+          style={{ x, width: scrollWidth, paddingLeft: "30px" }}
           className="flex items-center gap-20 relative"
         >
           {content.map((item, index) => {
             if (item.type === "video") {
               return (
-                <div 
-                  key={index} 
-                  className={`p-4 bg-secondary rounded-xl flex-shrink-0 ${item.containerClasses || ""}`}
-                >
-                  <div className={`p-4 bg-accent rounded-xl ${item.innerClasses || ""}`}>
+                <div
+                  key={index}
+                  className="p-4 bg-secondary rounded-xl flex-shrink-0">
+                  <div className="p-4 bg-accent rounded-xl">
                     <VideoPlayer url={item.url} />
+                    <p className="text-center text-md text-black mt-2">
+                      {item.caption}
+                    </p>
                   </div>
                 </div>
               );
             } else if (item.type === "text") {
               return (
-                <div 
-                  key={index} 
-                  className={`p-4 bg-secondary rounded-xl flex-shrink-0 w-[700px] h-[400px] flex items-center justify-center ${item.containerClasses || ""}`}
+                <div
+                  key={index}
+                  className="p-4 bg-secondary rounded-xl flex-shrink-0 w-[80vw] sm:w-[700px] h-[40vh] sm:h-[400px] flex items-center justify-center"
                 >
                   <div className="w-full h-full bg-accent rounded-xl">
-                    <div className={`text-center h-full flex flex-col items-center justify-center p-8 ${item.textContainerClasses || ""}`}>
-                      <h2 className={`text-3xl font-bold mb-4 ${item.titleClasses || ""}`}>{item.title}</h2>
-                      <p className={`text-xl ${item.descriptionClasses || ""}`}>{item.description}</p>
+                    <div className="text-center h-full flex flex-col items-center justify-center p-8">
+                      <h2 className="text-lg md:text-3xl font-bold mb-4">{item.title}</h2>
+                      <p className="text-sm md:text-xl">{item.description}</p>
                     </div>
                   </div>
                 </div>
               );
             } else if (item.type === "image") {
               return (
-                <div 
-                  key={index} 
-                  className={`p-4 bg-secondary rounded-xl flex-shrink-0 ${item.containerClasses || ""}`}
+                <div
+                  key={index}
+                  className="p-4 bg-secondary rounded-xl flex-shrink-0"
                 >
-                  <div className={`p-4 bg-accent rounded-xl ${item.innerClasses || ""}`}>
-                    <img 
-                      src={item.url} 
-                      alt={item.alt} 
-                      className={`w-[700px] h-[400px] object-cover rounded-lg ${item.imageClasses || ""}`}
-                    />
+                  <div className="p-4 bg-accent rounded-xl">
+                    <img
+                      src={item.url}
+                      alt={item.alt}
+                      className="w-[80vw] sm:w-[700px] h-[40vh] sm:h-[400px] object-cover rounded-lg"/>
+                    {item.caption && (
+                      <p className="text-center text-md text-black mt-2 max-w-[80vw] sm:max-w-[700px] break-words">
+                        {item.caption}
+                      </p>
+                    )}
                   </div>
                 </div>
               );
@@ -143,11 +185,19 @@ const VideoPlayer = ({ url }) => {
               mute: muted ? 1 : 0,
               modestbranding: 1,
               rel: 0,
-              fs: 1
-            }
-          }
+              fs: 1,
+            },
+          },
         }}
       />
+    </div>
+  );
+};
+
+const HorizontalScroll2 = () => {
+  return (
+    <div className="">
+      <HorizontalScrollVideo />
     </div>
   );
 };
