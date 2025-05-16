@@ -348,18 +348,20 @@ export const GallerySchool = () => {
                                     ❯
                                 </a>
                             </div>
-                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4 sm:p-6 z-10">
-                          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-white">
-                            {item.title}
-                          </h2>
-                          <p className="text-sm sm:text-base font-semibold text-white/90 mt-1">{item.desc}</p>
-                          <button
-                            className="btn btn-sm md:btn-md lg:btn-lg mt-2 text-black animate-pulse"
-                            onClick={() => openFullscreen(index)}
-                          >
-                            View Fullscreen
-                          </button>
-                        </div>
+                            <div className="absolute bottom-0 left-0 w-full px-4 pb-4 z-10">
+                              <div className="inline-block bg-black/90 text-white p-4 rounded-lg">
+                                <h2 className="text-sm md:text-3xl font-bold">
+                                  {item.title}
+                                </h2>
+                                <p className="text-xs md:text-xl font-semibold mt-1">{item.desc}</p>
+                                <button
+                                  className="btn btn-sm md:btn-md lg:btn-lg mt-2 text-black animate-pulse"
+                                  onClick={() => openFullscreen(index)}
+                                >
+                                  View Fullscreen
+                                </button>
+                              </div>
+                            </div>
 
                         </div>
                     ))}
