@@ -1,34 +1,52 @@
-// ✅ TOP OF FILE ONLY
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
 import './App.css';
 import './index.css';
-
-import { Landing } from './pages/Landing';
-import { Introduction } from './pages/Introduction';
-import { Timeline1 } from './pages/Timeline1';
-import { Timeline2 } from './pages/Timeline2';
-import { Timeline3 } from './pages/Timeline3';
-import { Timeline4 } from './pages/Timeline4';
-import { Transition1 } from './pages/Transition1';
-import { Transition2 } from './pages/Transition2';
-import { Transition3 } from './pages/Transition3';
+import { Navbar } from './components/Navbar';
+import Preloader from './components/Preloader';
+import { About } from './pages/About';
 import { GalleryMain } from './pages/GalleryMain';
 import { GalleryInterviews } from './pages/GalleryInterviews';
 import { GallerySchool } from './pages/GallerySchool';
 import { GalleryActivism } from './pages/GalleryActivism';
 import { NoPage } from './pages/NoPage';
-import { Outro } from './pages/Outro';
-import { Navbar } from './components/Navbar';
-import { About } from './pages/About';
-import Preloader from './components/Preloader'
+
+const Landing = lazy(() =>
+  import('./pages/Landing').then((module) => ({ default: module.Landing }))
+);
+const Introduction = lazy(() =>
+  import('./pages/Introduction').then((module) => ({ default: module.Introduction }))
+);
+const Timeline1 = lazy(() =>
+  import('./pages/Timeline1').then((module) => ({ default: module.Timeline1 }))
+);
+const Transition1 = lazy(() =>
+  import('./pages/Transition1').then((module) => ({ default: module.Transition1 }))
+);
+const Timeline2 = lazy(() =>
+  import('./pages/Timeline2').then((module) => ({ default: module.Timeline2 }))
+);
+const Transition2 = lazy(() =>
+  import('./pages/Transition2').then((module) => ({ default: module.Transition2 }))
+);
+const Timeline3 = lazy(() =>
+  import('./pages/Timeline3').then((module) => ({ default: module.Timeline3 }))
+);
+const Transition3 = lazy(() =>
+  import('./pages/Transition3').then((module) => ({ default: module.Transition3 }))
+);
+const Timeline4 = lazy(() =>
+  import('./pages/Timeline4').then((module) => ({ default: module.Timeline4 }))
+);
+const Outro = lazy(() =>
+  import('./pages/Outro').then((module) => ({ default: module.Outro }))
+);
 
 function Home() {
   return (
-    <>
+    <Suspense fallback={<div>Our Ancestors Have Given Us An Assignment</div>}>
       <Landing />
       <Introduction />
       <Timeline1 />
@@ -39,7 +57,7 @@ function Home() {
       <Transition3 />
       <Timeline4 />
       <Outro />
-    </>
+    </Suspense>
   );
 }
 
@@ -70,7 +88,7 @@ function App() {
     const handleScroll = () => AOS.refresh();
     window.addEventListener('scroll', handleScroll);
 
-    const timer = setTimeout(() => setLoading(false), 2000); // 2 sec preloader
+    const timer = setTimeout(() => setLoading(false), 2000);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);

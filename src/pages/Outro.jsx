@@ -1,81 +1,117 @@
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
+import { useRef, useState, useEffect } from "react";
+
+// Custom hook to detect if an element is in view
+const useInView = (threshold = 0.5) => {
+  const ref = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting);
+      },
+      { threshold }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => {
+      if (ref.current) observer.unobserve(ref.current);
+    };
+  }, [threshold]);
+
+  return [ref, inView];
+};
 
 export const Outro = () => {
-    
-    return (
-        <section id="" data-aos="fade" className="h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden">
+  // Use a threshold of 50% visibility
+  const [ref, inView] = useInView(0.5);
 
-            <div className="flex flex-col items-center justify-center mx-auto px-4 text-center sm:px-6 w-full max-w-4xl">
-                <TypeAnimation 
-                        sequence={[
-                            "Thank you.",
-                            1000,
-                            "ありがとう。",
-                            1000,
-                            "Gracias.",
-                            1000,
-                            "감사합니다.",
-                            1000,
-                            "Grazie.",
-                            1000,
-                            "धन्यवाद।",
-                            1000,
-                            "Merci.",
-                            1000,
-                            "谢谢。",
-                            1000,
-                            "Спасибо.",
-                            1000,
-                            ".شكرًا لك",
-                            1000,
-                            ".תודה לך",
-                            1000,
-                            "Cảm ơn.",
-                            1000,
-                            "Mauruuru koe.",
-                            1000,
-                            "Σας ευχαριστώ.",
-                            1000,
+  return (
+    <section
+      id="outro"
+      data-aos="fade"
+      ref={ref}
+      className="h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden"
+    >
+      <div className="flex flex-col items-center justify-center mx-auto px-4 text-center sm:px-6 w-full max-w-4xl">
+        {inView ? (
+          <TypeAnimation
+            sequence={[
+              "Thank you.",
+              1000,
+              "ありがとう。",
+              1000,
+              "Gracias.",
+              1000,
+              "감사합니다.",
+              1000,
+              "Grazie.",
+              1000,
+              "धन्यवाद।",
+              1000,
+              "Merci.",
+              1000,
+              "谢谢。",
+              1000,
+              "Спасибо.",
+              1000,
+              ".شكرًا لك",
+              1000,
+              ".תודה לך",
+              1000,
+              "Cảm ơn.",
+              1000,
+              "Mauruuru koe.",
+              1000,
+              "Σας ευχαριστώ.",
+              1000,
+            ]}
+            wrapper="span"
+            speed={1}
+            deletionSpeed={2}
+            className="text-4xl md:text-5xl font-bold mb-6"
+            repeat={Infinity}
+          />
+        ) : (
+          // Render a static placeholder until the component is in view
+          <span className="text-4xl md:text-5xl font-bold mb-6">Thank you.</span>
+        )}
 
-                        ]}
-                        wrapper="span"
-                        speed={1}
-                        deletionSpeed={2}
-                        className="text-4xl md:text-5xl font-bold mb-6"
-                        repeat={Infinity}
-                        />
-                    <div className="bg-secondary p-6 rounded-2xl justiy-center max-w-screen-sm w-full">
-                        <div className="bg-accent p-6 rounded-xl space-y-6">
-                        <h2 className="text-lg md:text-2xl font-medium">
-                            Though this chapter of Herman and Musheer's story closes, their work to secure Mary Pleasant's rightful place in history persists through their continued activism with Saint Mary's alumni.
-                        </h2>
+        <div className="bg-secondary p-6 rounded-2xl justify-center max-w-screen-sm w-full">
+          <div className="bg-accent p-6 rounded-xl space-y-6">
+            <h2 className="text-lg md:text-2xl font-medium">
+              Though this chapter of Herman and Musheer's story closes, their work to secure Mary Pleasant's
+              rightful place in history persists through their continued activism with Saint Mary's alumni.
+            </h2>
 
-                        <h2 className="text-md md:text-lg font-medium mt-10">
-                            Want to learn more? Visit the gallery to see full-length interviews, student-activism that Herman and Musheer participated in, and what campus life was like in the '70s.
-                        </h2>
+            <h2 className="text-lg font-bold mt-10 mb-2">Want to learn more?</h2>
+            <h2 className="text-sm md:text-md font-semibold">
+              Visit the gallery to see full-length interviews, student-activism that Herman and Musheer participated
+              in, and what campus life was like in the '70s.
+            </h2>
+          </div>
+        </div>
 
-                        </div>
-
-                    </div>
-
-                    <div className="flex flex-col md:flex-row gap-4 justify-center w-full max-w-2xl mt-2">
-                        <Link to="/gallery" className="btn btn-outline btn-secondary">
-                        View Gallery
-                        </Link>
-                        <button
-                        className="btn btn-accent"
-                        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                        >
-                        Back to the Top
-                        </button>
-                        <Link to="/about" className="btn btn-outline btn-secondary">
-                        View About
-                        </Link>
-                    </div>
-
-            </div>
-
-        </section>
-    );
+        <div className="flex flex-col md:flex-row gap-4 justify-center w-full max-w-2xl mt-2">
+          <Link to="/gallery" className="btn btn-outline btn-secondary">
+            View Gallery
+          </Link>
+          <button
+            className="btn btn-accent"
+            onClick={() =>
+              window.scrollTo({ top: 0, behavior: "smooth" })
+            }
+          >
+            Back to the Top
+          </button>
+          <Link to="/about" className="btn btn-outline btn-secondary">
+            View About
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
 };

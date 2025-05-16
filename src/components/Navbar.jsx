@@ -3,9 +3,7 @@ import { useLocation, Link } from 'react-router-dom';
 
 export const Navbar = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
-    const location = useLocation();  // Get current path
-
-    // Handle scroll effect for the home page
+    const location = useLocation(); 
     useEffect(() => {
         if (location.pathname === '/') {
             const handleScroll = () => {
@@ -16,11 +14,10 @@ export const Navbar = () => {
             window.addEventListener('scroll', handleScroll);
             return () => window.removeEventListener('scroll', handleScroll);
         } else {
-            setScrollProgress(0); // Reset progress bar when not on home page
+            setScrollProgress(0);
         }
     }, [location.pathname]);
 
-    // Get page title for /gallery and /about
     const getPageTitle = () => {
         switch (location.pathname) {
             case '/gallery':
@@ -34,12 +31,12 @@ export const Navbar = () => {
             case '/gallery/activism':
                 return "Student Activism";
             default:
-                return '';  // Default is empty for other pages
+                return ''; 
         }
     };
 
     return (
-        <div data-aos="fade-in" className="navbar bg-base-100/60 backdrop-blur-md z-50 fixed shadow-sm">
+        <div className="navbar bg-base-100/60 backdrop-blur-md z-50 fixed top-0 shadow-sm">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle btn-secondary hover:scale-120 duration-100 transition-transform">

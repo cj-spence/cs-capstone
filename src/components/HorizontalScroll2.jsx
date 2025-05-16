@@ -1,9 +1,37 @@
-import { motion, useTransform, useScroll, useMotionValue } from "framer-motion";
+import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import { ScrollDown } from "./ScrollDown";
-import musheerhermannathan from '../assets/musheerhermannathan.jpg'
-import hermanandmusheer from '../assets/hermanandmusheer2.png'
+import musheerhermannathan from "../assets/musheerhermannathan.jpg";
+import hermanandmusheer from "../assets/hermanandmusheer2.png";
+
+// Simple LazyLoad component using IntersectionObserver
+const LazyLoad = ({ children, placeholder = null, rootMargin = "100px" }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { rootMargin }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => {
+      if (ref.current) observer.unobserve(ref.current);
+    };
+  }, [rootMargin]);
+
+  return <div ref={ref}>{isVisible ? children : placeholder}</div>;
+};
 
 const HorizontalScrollVideo = () => {
   const targetRef = useRef(null);
@@ -14,7 +42,8 @@ const HorizontalScrollVideo = () => {
       type: "text",
       id: 2,
       title: "Experience at Saint Mary's",
-      description: "Herman and Musheer's paths to SMC, experience on campus, and what they learned.",
+      description:
+        "Herman and Musheer's paths to SMC, experience on campus, and what they learned.",
     },
     {
       type: "video",
@@ -26,7 +55,8 @@ const HorizontalScrollVideo = () => {
       type: "text",
       id: 2,
       title: "Herman's Path to SMC",
-      description: "A product of Oakland public schools, Herman developed a love for basketball and became a highly regarded recruit. In 1969, Herman followed his older brother, Roy Brown, and enrolled at SMC. ",
+      description:
+        "A product of Oakland public schools, Herman developed a love for basketball and became a highly regarded recruit. In 1969, Herman followed his older brother, Roy Brown, and enrolled at SMC.",
     },
     {
       type: "image",
@@ -44,8 +74,9 @@ const HorizontalScrollVideo = () => {
     {
       type: "text",
       id: 2,
-      title: "Musheer's Path and First Event at SMC",
-      description: "Before choosing to attend SMC, Musheer co-founded the first BSU at his Catholic High School and decided to attend SMC with a revolutionary vision.",
+      title: "Musheer's Revolutionary Beginnings",
+      description:
+        "Before choosing to attend SMC, Musheer co-founded the first BSU at his Catholic High School and decided to attend SMC with a revolutionary vision.",
     },
     {
       type: "image",
@@ -53,7 +84,7 @@ const HorizontalScrollVideo = () => {
       url: hermanandmusheer,
       alt: "Musheer's Hometown",
       caption: "Herman Brown and Musher Abdul-Jabbaar at SMC.",
-    }
+    },
   ];
 
   const cardPadding = 32;
@@ -71,13 +102,12 @@ const HorizontalScrollVideo = () => {
       const newCardWidth = vw > 640 ? 760 : vw * 0.9;
       setComputedCardWidth(newCardWidth);
       setViewportWidth(vw);
-
       const totalScroll =
         content.length * (newCardWidth + cardPadding + gapBetweenCards);
       const maxScrollNeeded = Math.max(totalScroll - vw, 0);
       setSectionHeight(window.innerHeight + maxScrollNeeded);
     };
-
+    
     onResize();
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
@@ -86,32 +116,12 @@ const HorizontalScrollVideo = () => {
   const scrollWidth =
     content.length * (computedCardWidth + cardPadding + gapBetweenCards);
 
-  // Create a target transform value based on the scroll progress.
+  // 1:1 mapping: Every change in scrollYProgress directly translates to horizontal movement.
   const xTarget = useTransform(
     scrollYProgress,
     [0, 1],
     [0, -scrollWidth + viewportWidth]
   );
-  // Create a motion value that we’ll manually update.
-  const smoothX = useMotionValue(0);
-
-  useEffect(() => {
-    let animationFrameId;
-    // A simple linear interpolation function.
-    const lerp = (start, end, factor) => start + (end - start) * factor;
-
-    const update = () => {
-      const current = smoothX.get();
-      const target = xTarget.get();
-      // Adjust the factor (0.1) for slower/faster smoothing.
-      const newValue = lerp(current, target, 0.1);
-      smoothX.set(newValue);
-      animationFrameId = requestAnimationFrame(update);
-    };
-    update();
-
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [xTarget, smoothX]);
 
   return (
     <section
@@ -122,10 +132,11 @@ const HorizontalScrollVideo = () => {
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div
           style={{
-            x: smoothX, // Use the manually interpolated value
+            x: xTarget,
             width: scrollWidth,
             paddingLeft: "30px",
             willChange: "transform",
+            transform: "translate3d(0, 0, 0)"
           }}
           className="flex items-center gap-13 relative"
         >
@@ -138,7 +149,20 @@ const HorizontalScrollVideo = () => {
                   style={{ width: computedCardWidth }}
                 >
                   <div className="p-4 bg-accent rounded-xl">
-                    <VideoPlayer url={item.url} />
+                    <LazyLoad
+                      placeholder={
+                        <div
+                          style={{
+                            height: "400px",
+                            width: "100%",
+                            backgroundColor: "#eee",
+                          }}
+                        />
+                      }
+                      rootMargin="200px"
+                    >
+                      <VideoPlayer url={item.url} />
+                    </LazyLoad>
                     <p className="text-center text-md text-black mt-2">
                       {item.caption}
                     </p>
@@ -170,11 +194,25 @@ const HorizontalScrollVideo = () => {
                   style={{ width: computedCardWidth }}
                 >
                   <div className="p-4 bg-accent rounded-xl">
-                    <img
-                      src={item.url}
-                      alt={item.alt}
-                      className="w-full h-[40vh] sm:h-[400px] object-cover rounded-lg"
-                    />
+                    {/* Wrap image with LazyLoad */}
+                    <LazyLoad
+                      placeholder={
+                        <div
+                          style={{
+                            height: "40vh",
+                            width: "100%",
+                            backgroundColor: "#eee",
+                          }}
+                        />
+                      }
+                      rootMargin="200px"
+                    >
+                      <img
+                        src={item.url}
+                        alt={item.alt}
+                        className="w-full h-[40vh] sm:h-[400px] object-cover rounded-lg"
+                      />
+                    </LazyLoad>
                     {item.caption && (
                       <p className="text-center text-md text-black mt-2">
                         {item.caption}

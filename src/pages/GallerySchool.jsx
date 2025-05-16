@@ -349,7 +349,7 @@ export const GallerySchool = () => {
                                 </a>
                             </div>
                             <div className="absolute bottom-0 left-0 w-full px-4 pb-4 z-10">
-                              <div className="inline-block bg-black/90 text-white p-4 rounded-lg">
+                              <div className="inline-block bg-black/60 text-white p-4 rounded-lg">
                                 <h2 className="text-sm md:text-3xl font-bold">
                                   {item.title}
                                 </h2>
