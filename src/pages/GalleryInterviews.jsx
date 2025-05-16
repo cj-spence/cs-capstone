@@ -69,7 +69,11 @@ export const GalleryInterviews = () => {
                 </div>
             </div>
 
-            <div className='w-full max-w-screen-sm lg:max-w-screen-lg mt-6'>
+            <div className="fixed bottom-0 left-0 bg-black text-white p-2 z-50">
+            Viewport width: {window.innerWidth}px
+            </div>
+
+            <div className='w-full max-w-screen-sm md:max-w-screen-md xl:max-w-screen-lg mt-6'>
                 <div className='p-2 md:p-4 bg-secondary rounded-xl'>
                     <div className='p-2 md:p-4 bg-accent rounded-lg'>
                         <div 
@@ -115,6 +119,7 @@ export const GalleryInterviews = () => {
                     </div>
                 </div>
             </div>
+
 
             <div className="flex flex-col md:flex-row gap-4 justify-center w-full max-w-screen-md mt-10">
                 <Link to="/gallery" className="btn btn-accent">

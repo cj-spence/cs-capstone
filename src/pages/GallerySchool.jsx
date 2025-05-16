@@ -320,7 +320,7 @@ export const GallerySchool = () => {
                             <img
                                 src={item.image}
                                 alt={item.alt}
-                                className="w-full object-cover h-[40vh] sm:h-[50vh]"
+                                className="w-full object-cover h-[40vh] md:h-[50vh]"
                             />
                             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                                 <a
