@@ -6,7 +6,7 @@ export const Transition1 = () => {
     return (
         <section id="" className="flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden">
 
-            <div data-aos="fade" className="flex flex-col items-center justify-center mx-auto px-4 text-center sm:px-6 w-full max-w-4xl">
+            <div data-aos="" className="flex flex-col items-center justify-center mx-auto px-4 text-center sm:px-6 w-full max-w-4xl">
                 <div className="p-4 bg-secondary rounded-xl flex-shrink-0">
                   <div className="p-4 bg-accent rounded-xl">
                     <img src={youngmusheer} className="w-[80vw] sm:w-[700px] h-[40vh] sm:h-[400px] object-cover rounded-lg" />

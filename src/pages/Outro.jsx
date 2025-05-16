@@ -4,9 +4,9 @@ import { TypeAnimation } from "react-type-animation";
 export const Outro = () => {
     
     return (
-        <section id="" data-aos="fade" className="min-h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden">
+        <section id="" data-aos="fade" className="h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden">
 
-            <div className="h-screen flex flex-col items-center justify-center mx-auto px-4 text-center sm:px-6 w-full max-w-4xl">
+            <div className="flex flex-col items-center justify-center mx-auto px-4 text-center sm:px-6 w-full max-w-4xl">
                 <TypeAnimation 
                         sequence={[
                             "Thank you.",
@@ -45,7 +45,7 @@ export const Outro = () => {
                         className="text-4xl md:text-5xl font-bold mb-6"
                         repeat={Infinity}
                         />
-                    <div className="bg-secondary p-6 rounded-2xl max-w-3xl w-full">
+                    <div className="bg-secondary p-6 rounded-2xl justiy-center max-w-screen-sm w-full">
                         <div className="bg-accent p-6 rounded-xl space-y-6">
                         <h2 className="text-lg md:text-2xl font-medium">
                             Though this chapter of Herman and Musheer's story closes, their work to secure Mary Pleasant's rightful place in history persists through their continued activism with Saint Mary's alumni.
