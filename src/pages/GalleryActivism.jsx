@@ -1,43 +1,107 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Augustine from '../assets/augustinehall1970.JPG';
-import Albert from '../assets/library1970.JPG';
-import quad from '../assets/quadfromchapel1975.JPG';
-import sem from '../assets/seminar1970.JPG';
-import classtime from '../assets/classroom1970.JPG';
+import chapeloccupation from '../assets/chapeloccupation.png'
+import chapelprotest1 from '../assets/chapelprotest.png'
+import chapelprotest2 from '../assets/chapelprotest1972.png'
+import leadersofmecha from '../assets/leadersofmecha.png'
+import peacefulprotest from '../assets/peacefulchappelsleeping.png'
+import natehermanmusheer from '../assets/musheerhermannathan.jpg'
+import bsuleaders from '../assets/BSU.png'
+import solidaritystatements from '../assets/solidaritystatements.png'
+import studentactivism from '../assets/studentactivism.png'
+import gaol from '../assets/gaol.png'
+import fist from '../assets/fist.jpg'
+import bsudemands from '../assets/bsudemands.png'
+import jeyboycott from '../assets/boycott.png'
+import hermanandmusheer from '../assets/hermanmusheer2.png'
 
 const galleryItems = [
   {
-    image: Augustine,
-    alt: "Augustine Hall in 1970",
-    title: "1970s Campus Life",
-    desc: "Augustine Hall in 1970"
+    image: natehermanmusheer,
+    alt: "Student Activist Leaders",
+    title: "Student Activist Leaders",
+    desc: "Nate Carroll, Herman Brown, and Musheer Abdul-Jabbaar, leaders of the SMC basketball boycotts."
   },
   {
-    image: Albert,
-    alt: "St. Albert Hall Library, 1970",
-    title: "St. Albert Hall Library, 1970",
-    desc: "New Library building with students in foreground"
+    image: hermanandmusheer,
+    alt: "Herman and Musheer",
+    title: "Herman and Musheer",
+    desc: "When Herman read the 1971 and 1972 Basketball boycott speeches, Musheer was his bodyguard by his side."
   },
   {
-    image: quad,
-    alt: "St. Albert Hall Library Quad, 1970",
-    title: "St. Albert Hall Library Quad, 1970",
-    desc: "New Library building behind oak tree"
+    image: jeyboycott,
+    alt: "Jet Magazine Boycott Excerpt, [1971]",
+    title: "Jet Magazine Boycott Excerpt, [1971]",
+    desc: "An excerpt from the March 4, 1972 JET Magazine, showcasing the BSU Demands from the basketball boycott."
   },
   {
-    image: sem,
-    alt: "Philosophy Seminar, 1970",
-    title: "Philosophy Seminar, 1970",
-    desc: "Philosophy Seminar with Owen Carroll"
+    image: bsudemands,
+    alt: "BSU Demands of SMC, [1971]",
+    title: "BSU Demands of SMC, [1971]",
+    desc: "The letter written to Saint Mary's administration after the basketball boycott vs. Fresno State."
   },
   {
-    image: classtime,
-    alt: "Classroom Scene, 1970",
-    title: "Classroom Scene, 1970",
-    desc: "Students in classroom setting"
-  }
+    image: chapelprotest1,
+    alt: "Chapel Protest, [1972]",
+    title: "Chapel Protest, [1972]",
+    desc: "After the aftermath of the basketball boycotts, students occupied the Chapel for several days after SMC threatened to eliminate Chicano Studies courses."
+  },
+  {
+    image: chapelprotest2,
+    alt: "Speaking to the Press, [1972]",
+    title: "Speaking to the Press, [1972]",
+    desc: "Darryl Burnett speaking to local press during the Chapel occupation."
+  },
+  {
+    image: peacefulprotest,
+    alt: "Peaceful Occupation of the Chapel, [1972]",
+    title: "Peaceful Occupation of the Chapel, [1972]",
+    desc: "Students pictured sleeping during a peaceful occupation of the Chapel."
+  },
+  {
+    image: leadersofmecha,
+    alt: "Leaders of MECha, [1972]",
+    title: "Leaders of MECha, [1972]",
+    desc: "Alex Contereras, unknown, and Carlos Reyes were leaders of MECha, a student-group fighting for solidarity."
+  },
+  {
+    image: chapeloccupation,
+    alt: "Solidified Community, [1972]",
+    title: "Solidified Community, [1972]",
+    desc: "Community members and students gathered at SMC to share solidarity with SMC minority students."
+  },
+  {
+    image: studentactivism,
+    alt: "Community Activism, [1972]",
+    title: "Community Activism, [1972]",
+    desc: "A collage of moments of solidarity from the Chapel Protest."
+  },
+  {
+    image: solidaritystatements,
+    alt: "Staff Solidarity, [1972]",
+    title: "Staff Solidarity, [1972]",
+    desc: "Thomas Brown (left), Assistant Dean for Black students and Harry Acosta (right), Assistant Dean for Chicano students share statements of solidarity."
+  },
+  {
+    image: gaol,
+    alt: "Reflections on Connections, [1972]",
+    title: "Reflections on Connections, [1972]",
+    desc: "An excerpt from Thomas Brown's 'Reflections on Connections'."
+  },
+  {
+    image: bsuleaders,
+    alt: "BSU Leader Musheer",
+    title: "BSU Leader Musheer",
+    desc: "Musheer Abdul-Jabbaar (formally Edward Badon), a co-founder of BSU at is Catholic High School in L.A."
+  },
+  {
+    image: fist,
+    alt: "Reginald Lemay's Fist, [1972]",
+    title: "Reginald Lemay's Fist, [1972]",
+    desc: "Image of Reginald Lemay's fist, symbolism of solidarity."
+  },
 ];
+
 
 export const GalleryActivism = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -109,7 +173,7 @@ export const GalleryActivism = () => {
   }, [isFullscreen]);
 
   return (
-    <section id="/activism" data-aos="fade" className="h-screen flex flex-col items-center justify-center p-4 bg-base-100">
+    <section id="/saintmarys" data-aos="fade" className="h-screen flex flex-col items-center justify-center p-4 bg-base-100">
 
     <p className="block lg:hidden text-md text-center font-semibold mb-2">
       Swipe left or right to browse photos
@@ -144,18 +208,21 @@ export const GalleryActivism = () => {
                                     ❯
                                 </a>
                             </div>
-                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 sm:p-6">
-                                <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-white">
-                                    {item.title}
+                            <div className="absolute bottom-0 left-0 w-full px-4 pb-4 z-10">
+                              <div className="inline-block bg-black/90 text-white p-4 rounded-lg">
+                                <h2 className="text-md md:text-3xl font-bold">
+                                  {item.title}
                                 </h2>
-                                <p className="text-sm sm:text-base text-white/90 mt-1">{item.desc}</p>
+                                <p className="text-xs md:text-xl font-semibold mt-1">{item.desc}</p>
                                 <button
-                                    className="btn btn-sm md:btn-md lg:btn-lg btn-active mt-2"
-                                    onClick={() => openFullscreen(index)}
+                                  className="btn btn-sm md:btn-md lg:btn-lg mt-2 text-black animate-pulse"
+                                  onClick={() => openFullscreen(index)}
                                 >
-                                    View Fullscreen
+                                  View Fullscreen
                                 </button>
+                              </div>
                             </div>
+
                         </div>
                     ))}
                 </div>

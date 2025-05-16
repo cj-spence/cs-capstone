@@ -59,21 +59,17 @@ export const Outro = () => {
 
                     </div>
 
-                    <h3 className="text-sm md:text-xl font-medium mt-5">
-                        Check out the other sections of the website below.
-                    </h3>
-
                     <div className="flex flex-col md:flex-row gap-4 justify-center w-full max-w-2xl mt-2">
-                        <Link to="/gallery" className="btn btn-accent">
+                        <Link to="/gallery" className="btn btn-outline btn-secondary">
                         View Gallery
                         </Link>
                         <button
-                        className="btn btn-outline btn-secondary"
+                        className="btn btn-accent"
                         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                         >
                         Back to the Top
                         </button>
-                        <Link to="/about" className="btn btn-accent">
+                        <Link to="/about" className="btn btn-outline btn-secondary">
                         View About
                         </Link>
                     </div>

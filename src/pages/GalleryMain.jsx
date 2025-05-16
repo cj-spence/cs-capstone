@@ -1,4 +1,4 @@
-import HermanMusheer from '../assets/hermanandmusheer.png'
+import HermanMusheer from '../assets/musheerandfriends.jpg'
 import Fist from '../assets/fist.jpg'
 import Campus from '../assets/chapelarcade.png'
 import { Link } from 'react-router-dom';
@@ -11,12 +11,12 @@ export const GalleryMain = () => {
         >
             <div 
                 data-aos="fade" 
-                className="mb-2 md:mb-10 text-sm sm:text-base md:text-lg lg:text-2xl font-bold"
+                className="mb-2 md:mb-1 lg:mb-5 text-sm sm:text-base md:text-lg lg:text-2xl font-bold"
             >
                 Click the pictures below to check out the galleries.
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 w-full max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-10 w-full max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl mx-auto">
                 <div data-aos="fade-right" className="flex flex-col items-center">
                     <div className="relative w-full">
                         <div className="bg-accent p-2 sm:p-3 md:p-4 rounded-lg w-full">
@@ -24,7 +24,7 @@ export const GalleryMain = () => {
                                 <img 
                                     src={Campus} 
                                     alt="Saint Mary's Campus 1970" 
-                                    className='w-full h-[140px] sm:h-[180px] md:h-[220px] lg:h-[250px] xl:h-[300px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
+                                    className='w-full h-[170px] sm:h-[180px] md:h-[210px] lg:h-[250px] xl:h-[300px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
                                 />
                             </Link>
                         </div>
@@ -43,7 +43,7 @@ export const GalleryMain = () => {
                                 <img 
                                     src={HermanMusheer} 
                                     alt="Black Resistance" 
-                                    className='w-full h-[140px] sm:h-[180px] md:h-[220px] lg:h-[250px] xl:h-[300px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
+                                    className='w-full h-[170px] sm:h-[180px] md:h-[210px] lg:h-[250px] xl:h-[300px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
                                 />
                             </Link>
                         </div>
@@ -62,7 +62,7 @@ export const GalleryMain = () => {
                                 <img 
                                     src={Fist} 
                                     alt="Student Activism" 
-                                    className='w-full h-[140px] sm:h-[180px] md:h-[220px] lg:h-[250px] xl:h-[300px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
+                                    className='w-full h-[170px] sm:h-[180px] md:h-[210px] lg:h-[250px] xl:h-[300px] rounded-lg shadow-md hover:scale-105 duration-300 transition-transform object-cover'
                                 />
                             </Link>
                         </div>

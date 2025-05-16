@@ -27,11 +27,13 @@ import mathcontest2 from '../assets/mathcontest21974.JPG'
 import mathematicscontest from '../assets/mathematicscontest1974.JPG'
 import moragacampus from '../assets/moragacampus1969.JPG'
 import sculptor from '../assets/sculptor1972.JPG'
+import newscomic from '../assets/newscomic.JPG'
 import smcfootball from '../assets/smcfootball1974.jpg'
 import smcvssfstate from '../assets/smcvssfstate1970.JPG'
 import stadium from '../assets/stadium1973.JPG'
 import studyinglibrary from '../assets/studyinglibrary1969.JPG'
 import swimmingpool from '../assets/swimmingpool1972.JPG'
+import seniors from '../assets/seniors.png'
 
 const galleryItems = [
   {
@@ -45,6 +47,12 @@ const galleryItems = [
     alt: "Wilson Riles, [1971]",
     title: "Wilson Riles, [1971]",
     desc: "First African American to be elected to statewide office in California, visiting Saint Mary's"
+  },
+  {
+    image: seniors,
+    alt: "Outstanding Seniors, [1973]",
+    title: "Outstanding Seniors, [1973]",
+    desc: "Outstanding Seniors of 1973, including Musheer Abdul-Jabbaar (formerly Edward Badon)"
   },
   {
     image: augustine,
@@ -195,6 +203,12 @@ const galleryItems = [
     alt: "Sculpture Work, [1972]",
     title: "Sculpture Work, [1972]",
     desc: "Student working on sculpture"
+  },
+  {
+    image: newscomic,
+    alt: "Sportlight Cartoon, [1969]",
+    title: "Sportlight Cartoon, [1969]",
+    desc: "Sportlight Cartoon featuring Coach George Galli by Lee Susman"
   },
   {
     image: smcfootball,
