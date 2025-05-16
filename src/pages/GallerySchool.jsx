@@ -300,11 +300,6 @@ export const GallerySchool = () => {
 
   return (
     <section id="/saintmarys" data-aos="fade" className="h-screen flex flex-col items-center justify-center p-4 bg-base-100">
-    <div className="p-3 bg-secondary rounded-xl mb-5">
-        <div className="p-3 bg-accent rounded-xl text-md sm:text-lg md:text-xl lg:text-2xl font-semibold max-w-full sm:max-w-sm mx-auto">
-            Saint Mary's in the '70s
-        </div>
-    </div>
 
 
     <div className="p-4 bg-secondary rounded-xl">

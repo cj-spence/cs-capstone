@@ -110,11 +110,6 @@ export const GalleryActivism = () => {
 
   return (
     <section id="/activism" data-aos="fade" className="h-screen flex flex-col items-center justify-center p-4 bg-base-100">
-    <div className="p-3 bg-secondary rounded-xl mb-5">
-        <div className="p-3 bg-accent rounded-xl text-md sm:text-lg md:text-xl lg:text-2xl font-semibold max-w-full sm:max-w-sm mx-auto">
-            Student Activism
-        </div>
-    </div>
 
 
     <div className="p-4 bg-secondary rounded-xl">
@@ -130,7 +125,7 @@ export const GalleryActivism = () => {
                             <img
                                 src={item.image}
                                 alt={item.alt}
-                                className="w-full object-cover h-[40vh] sm:h-[50vh]"
+                                className="w-full object-cover h-[50vh] md:h-[60vh]"
                             />
                             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                                 <a

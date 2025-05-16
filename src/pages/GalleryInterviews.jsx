@@ -63,13 +63,9 @@ export const GalleryInterviews = () => {
 
     return (
         <section id="/interviews" data-aos="fade" className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden px-4 py-10">
-            <div className='p-4 bg-secondary rounded-xl'>
-                <div className='p-4 bg-accent rounded-xl text-xl max-w-sm font-semibold'>
-                    Full Length Interviews
-                </div>
-            </div>
 
-            <div className='w-full max-w-screen-sm md:max-w-screen-md xl:max-w-screen-xl mt-6'>
+
+            <div className='w-full max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg mt-6'>
                 <div className='p-2 md:p-4 bg-secondary rounded-xl'>
                     <div className='p-2 md:p-4 bg-accent rounded-lg'>
                         <div 
