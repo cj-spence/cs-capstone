@@ -89,22 +89,25 @@ const HorizontalScrollVideo = () => {
   const scrollWidth =
     content.length * (computedCardWidth + cardPadding + gapBetweenCards);
 
+  // Create a target transform value based on the scroll progress.
   const xTarget = useTransform(
     scrollYProgress,
     [0, 1],
     [0, -scrollWidth + viewportWidth]
   );
+  // Create a motion value that we’ll manually update.
   const smoothX = useMotionValue(0);
 
   useEffect(() => {
     let animationFrameId;
+    // A simple linear interpolation function.
     const lerp = (start, end, factor) => start + (end - start) * factor;
 
     const update = () => {
       const current = smoothX.get();
       const target = xTarget.get();
       // Adjust the factor (0.1) for slower/faster smoothing.
-      const newValue = lerp(current, target, 0.5);
+      const newValue = lerp(current, target, 0.1);
       smoothX.set(newValue);
       animationFrameId = requestAnimationFrame(update);
     };
@@ -122,7 +125,7 @@ const HorizontalScrollVideo = () => {
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div
           style={{
-            x: smoothX,
+            x: smoothX, // Use the manually interpolated value
             width: scrollWidth,
             paddingLeft: "30px",
             willChange: "transform",
