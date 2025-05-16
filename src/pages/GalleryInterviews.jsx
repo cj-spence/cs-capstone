@@ -64,8 +64,10 @@ export const GalleryInterviews = () => {
     return (
         <section id="/interviews" data-aos="fade" className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden px-4 py-10">
 
-
             <div className='w-full max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg mt-6'>
+                <p className="block lg:hidden text-md text-center font-semibold mb-2">
+                    Swipe left or right to browse videos
+                </p>
                 <div className='p-2 md:p-4 bg-secondary rounded-xl'>
                     <div className='p-2 md:p-4 bg-accent rounded-lg'>
                         <div 
@@ -91,7 +93,7 @@ export const GalleryInterviews = () => {
                                         ></iframe>
                                     </div>
 
-                                    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between z-10 pointer-events-none">
+                                    <div className="hidden md:flex absolute left-5 right-5 top-1/2 -translate-y-1/2 justify-between z-10 pointer-events-none">
                                         <a 
                                             href={`#slide${index === 0 ? videos.length : index}`} 
                                             className="btn btn-circle btn-secondary text-xs md:text-lg w-7 h-7 md:w-12 md:h-12 pointer-events-auto"

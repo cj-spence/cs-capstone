@@ -6,7 +6,7 @@ import { SiDaisyui } from "react-icons/si";
 export const About = () => {
     
     return (
-        <section id="/about" className="h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden">
+        <section id="/about" className="min-h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden">
 
             <div data-aos="fade" data-aos-duration="2000" className="flex flex-col items-center justify-center mx-auto px-4 text-center sm:px-6 w-full max-w-4xl">
             <h1 className="text-4xl md:text-7xl font-bold mb-6 drop-shadow-xl"> Made With Love </h1>
@@ -18,13 +18,17 @@ export const About = () => {
                     <span className="font-bold"> Herman </span> and 
                     <span className="font-bold"> Musheer</span>.
                 </h2>
+
+                <h3 className="text-md md:text-xl font-medium">
+                    Historical photos found in the <a href="https://stmarys.libraryhost.com/?p=digitallibrary/digitallibrary" target="_blank" className="font-bold underline decoration-dotted"> Saint Mary's Library Archive</a>
+                </h3>  
                 
                 <h3 className="text-md md:text-xl font-medium">
                     Thank you to <span className="font-bold">Professor Viola</span> and the{" "}
-                    <span className="tooltip" data-tip="Paris Alcaraz, Natalia Cortev, Kalilah Epperson-Lee, Khalia Gathwright, Alexis Hackett, Eloise Hampson, Dante Hauser, Evony Jackson, Julian Jimenez, Kaleia Ketcham, Julie Lacerda, Eduardo Leon, Thibaud Maxant, Maiya Mccleod, Erica Meyers, Savannah Peden, Gwen Penalber, Christopher Spence.">
+                    <span className="tooltip" data-tip="Paris Alcaraz, Natalia Cortev, Kalilah Epperson-Lee, Khalia Gathwright, Alexis Hackett, Eloise Hampson, Dante Hauser, Evony Jackson, Julian Jimenez, Kaleia Ketcham, Julie Lacerda, Eduardo Leon, Thibaud Maxant, Maiya Mccleod, Erica Meyers, Savannah Peden, Gwen Penalber, Christopher (CJ) Spence.">
                     <span className="underline decoration-dotted cursor-pointer font-semibold">ES-201 Class</span>.
                     </span>{" "}
-                </h3>         
+                </h3>     
                 
                 <p className='text-lg text-black'>
                     Developed by <a href="https://cjspence.com" target="_blank" className="font-bold underline decoration-dotted"> CJ Spence </a> and <span className="font-bold">Jonathan Chambers</span>.

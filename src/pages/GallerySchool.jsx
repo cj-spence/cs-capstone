@@ -301,6 +301,9 @@ export const GallerySchool = () => {
   return (
     <section id="/saintmarys" data-aos="fade" className="h-screen flex flex-col items-center justify-center p-4 bg-base-100">
 
+    <p className="block lg:hidden text-md text-center font-semibold mb-2">
+      Swipe left or right to browse photos
+    </p>
 
     <div className="p-4 bg-secondary rounded-xl">
         <div className="p-4 bg-accent rounded-xl">
@@ -315,7 +318,7 @@ export const GallerySchool = () => {
                             <img
                                 src={item.image}
                                 alt={item.alt}
-                                className="w-full object-cover h-[40vh] md:h-[50vh]"
+                                className="w-full object-cover h-[50vh] md:h-[60vh]"
                             />
                             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                                 <a

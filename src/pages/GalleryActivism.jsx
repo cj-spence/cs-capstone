@@ -111,6 +111,9 @@ export const GalleryActivism = () => {
   return (
     <section id="/activism" data-aos="fade" className="h-screen flex flex-col items-center justify-center p-4 bg-base-100">
 
+    <p className="block lg:hidden text-md text-center font-semibold mb-2">
+      Swipe left or right to browse photos
+    </p>
 
     <div className="p-4 bg-secondary rounded-xl">
         <div className="p-4 bg-accent rounded-xl">
