@@ -32,7 +32,7 @@ export const Outro = () => {
       id="outro"
       data-aos="fade"
       ref={ref}
-      className="h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden"
     >
       <div className="flex flex-col items-center justify-center mx-auto px-4 text-center sm:px-6 w-full max-w-4xl">
         {inView ? (
@@ -79,7 +79,7 @@ export const Outro = () => {
 
         <div className="bg-secondary p-6 rounded-2xl justify-center max-w-screen-sm w-full">
           <div className="bg-accent p-6 rounded-xl space-y-6">
-            <h2 className="text-lg md:text-2xl font-medium">
+            <h2 className="text-md md:text-2xl font-medium">
               Though this chapter of Herman and Musheer's story closes, their work to secure Mary Pleasant's
               rightful place in history persists through their continued activism with Saint Mary's alumni.
             </h2>
