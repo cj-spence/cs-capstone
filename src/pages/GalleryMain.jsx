@@ -29,7 +29,7 @@ export const GalleryMain = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="mt-2 w-full">
+                    <div className="mt-1 md:mt-2 w-full">
                         <div className="badge badge-accent rounded-lg text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold px-3 py-2 md:py-4 w-full">
                             Saint Mary's in the '70s
                         </div>
@@ -48,7 +48,7 @@ export const GalleryMain = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="mt-2 w-full">
+                    <div className="mt-1 md:mt-2 w-full">
                         <div className="badge badge-secondary rounded-lg text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold px-3 sm:py-2 md:py-4 w-full">
                             Full-Length Interviews
                         </div>
@@ -67,7 +67,7 @@ export const GalleryMain = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="mt-2 w-full">
+                    <div className="mt-1 md:mt-2 w-full">
                         <div className="badge badge-accent rounded-lg text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold px-3 sm:py-2 md:py-4 w-full">
                             Student Activism
                         </div>
