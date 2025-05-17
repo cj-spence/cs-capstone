@@ -69,10 +69,10 @@ const HorizontalScrollVideo = () => {
     {
       type: "image",
       id: 3,
-      url: marypleasant1,
-      alt: "Mary Ellen Pleasant",
+      url: marypleasant2,
+      alt: "Mary Ellen Pleasant 2",
       caption:
-        "Mary Pleasant was California’s first Black millionaire, a key figure in the California Civil Rights movement, and an early donor to SMC.",
+        "Pleasant, a light-skinned Black woman often passed as white to avoid recapture back into slavery.",
     },
     {
       type: "video",
@@ -90,10 +90,10 @@ const HorizontalScrollVideo = () => {
     {
       type: "image",
       id: 3,
-      url: marypleasant2,
-      alt: "Mary Ellen Pleasant 2",
+      url: marypleasant1,
+      alt: "Mary Ellen Pleasant",
       caption:
-        "Pleasant, a light-skinned Black woman often passed as white to avoid recapture back into slavery.",
+        "Mary Pleasant was California’s first Black millionaire, a key figure in the California Civil Rights movement, and an early donor to SMC.",
     },
   ];
 
