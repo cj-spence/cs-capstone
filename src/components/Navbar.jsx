@@ -102,7 +102,7 @@ const DesktopNavbar = () => {
 const MobileDock = () => {
   return (
     <div className="dock dock-md fixed z-50 bottom-0 left-0 w-full flex justify-around bg-base-100/60 backdrop-blur-md shadow-t p-2">
-      <Link to="/" className="flex flex-col items-center">
+      <Link to="/gallery" className="flex flex-col items-center">
         <RiGalleryFill
           className="w-6 h-6 mb-1"
           viewBox="0 0 24 24"
