@@ -16,7 +16,7 @@ export const GalleryMain = () => {
                 Click the pictures below to check out the galleries.
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-10 w-full max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-10 w-full max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl mx-auto">
                 <div data-aos="fade-right" className="flex flex-col items-center">
                     <div className="relative w-full">
                         <div className="bg-accent p-2 sm:p-3 md:p-4 rounded-lg w-full">

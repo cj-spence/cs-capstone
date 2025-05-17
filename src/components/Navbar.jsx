@@ -104,20 +104,20 @@ const MobileDock = () => {
     <div className="dock dock-md fixed z-50 bottom-0 left-0 w-full flex justify-around bg-base-100/60 backdrop-blur-md shadow-t p-2">
       <Link to="/gallery" className="flex flex-col items-center">
         <RiGalleryFill
-          className="w-5 h-5 mb-1"
+          className="w-6 h-6 mb-1"
           viewBox="0 0 24 24"
           fill="currentColor" />
         <span className="text-xs font-semibold text-center">Gallery</span>
       </Link>
       <Link to="/" className="flex flex-col items-center">
         <MdHome
-          className="w-6 h-6 mb-1"
+          className="w-7 h-7 mb-1"
           viewBox="0 0 21 21"/>
         <span className="text-xs font-semibold text-center">Home</span>
       </Link>
       <Link to="/about" className="flex flex-col items-center">
         <BiSolidInfoSquare
-          className="w-5 h-5 mb-1"
+          className="w-6 h-6 mb-1"
           viewBox="0 0 21 21"/>
         <span className="text-xs font-semibold text-center">About</span>
       </Link>
