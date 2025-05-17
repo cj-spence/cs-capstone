@@ -68,7 +68,16 @@ const DesktopNavbar = () => {
             className="menu menu-lg dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <Link to="/">Home</Link>
+              <Link
+                    to="/"
+                    onClick={() => {
+                        if (location.pathname === "/") {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        }
+                    }}
+                    >
+                    Home
+                </Link>
             </li>
             <li>
               <Link to="/gallery">Gallery</Link>
@@ -100,30 +109,40 @@ const DesktopNavbar = () => {
 };
 
 const MobileDock = () => {
+  const location = useLocation();
+  
   return (
     <div className="dock dock-md fixed z-50 bottom-0 left-0 w-full flex justify-around bg-base-100/60 backdrop-blur-md shadow-t p-2">
-      <Link to="/gallery" className="flex flex-col items-center">
-        <RiGalleryFill
-          className="w-6 h-6 text-black mb-1"
-          viewBox="0 0 24 24"
-          fill="currentColor" />
+      <Link
+        to="/gallery"
+        className="flex flex-col items-center"
+      >
+        <RiGalleryFill className="w-6 h-6 text-black mb-1" />
         <span className="text-xs font-semibold text-center">Gallery</span>
       </Link>
-      <Link to="/" className="flex flex-col items-center">
-        <MdHome
-          className="w-7 h-7 text-black mb-1"
-          viewBox="0 0 21 21"/>
+      <Link
+        to="/"
+        onClick={() => {
+          if (location.pathname === "/") {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+        }}
+        className="flex flex-col items-center"
+      >
+        <MdHome className="w-7 h-7 text-black mb-1" />
         <span className="text-xs font-semibold text-center">Home</span>
       </Link>
-      <Link to="/about" className="flex flex-col items-center">
-        <BiSolidInfoSquare
-          className="w-6 h-6 text-black mb-1"
-          viewBox="0 0 21 21"/>
+      <Link
+        to="/about"
+        className="flex flex-col items-center"
+      >
+        <BiSolidInfoSquare className="w-6 h-6 text-black mb-1" />
         <span className="text-xs font-semibold text-center">About</span>
       </Link>
     </div>
   );
 };
+
 
 export const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
