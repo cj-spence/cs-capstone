@@ -46,7 +46,7 @@ const Outro = lazy(() =>
 
 function Home() {
   return (
-    <Suspense fallback={<div>Our Ancestors Have Given Us An Assignment</div>}>
+    <Suspense fallback={<div></div>}>
       <Landing />
       <Introduction />
       <Timeline1 />
