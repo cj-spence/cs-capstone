@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 import { useRef, useState, useEffect } from "react";
 
-// Custom hook to detect if an element is in view
 const useInView = (threshold = 0.5) => {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
@@ -26,7 +25,6 @@ const useInView = (threshold = 0.5) => {
 };
 
 export const Outro = () => {
-  // Use a threshold of 50% visibility
   const [ref, inView] = useInView(0.5);
 
   return (
@@ -76,7 +74,6 @@ export const Outro = () => {
             repeat={Infinity}
           />
         ) : (
-          // Render a static placeholder until the component is in view
           <span className="text-4xl md:text-5xl font-bold mb-6">Thank you.</span>
         )}
 

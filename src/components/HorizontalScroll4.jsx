@@ -5,7 +5,6 @@ import { ScrollDown } from "./ScrollDown";
 import marypleasant1 from "../assets/marypleasant.jpg";
 import marypleasant2 from "../assets/marypleasant2.jpg";
 
-// LazyLoad Component using IntersectionObserver
 const LazyLoad = ({ children, placeholder = null, rootMargin = "200px" }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
@@ -160,7 +159,6 @@ const HorizontalScrollVideo = () => {
                   style={{ width: computedCardWidth }}
                 >
                   <div className="p-4 bg-accent rounded-xl">
-                    {/* Lazy load the video */}
                     <LazyLoad
                       placeholder={
                         <div
@@ -210,7 +208,6 @@ const HorizontalScrollVideo = () => {
                   style={{ width: computedCardWidth }}
                 >
                   <div className="p-4 bg-accent rounded-xl">
-                    {/* Lazy load the image */}
                     <LazyLoad
                       placeholder={
                         <div

@@ -2,7 +2,6 @@ import { TypeAnimation } from "react-type-animation";
 import { ScrollDown } from "../components/ScrollDown";
 import { useRef, useState, useEffect } from "react";
 
-// Custom hook to detect if the element is in view.
 const useInView = (threshold = 0.2) => {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
@@ -26,7 +25,6 @@ const useInView = (threshold = 0.2) => {
 };
 
 export const Landing = () => {
-  // Attach this hook to a container that wraps the animation.
   const [ref, inView] = useInView(0.2);
 
   return (
@@ -79,7 +77,6 @@ export const Landing = () => {
             repeat={Infinity}
           />
         ) : (
-          // Optionally, render a static placeholder when animation is paused.
           <span className="text-4xl md:text-7xl font-bold mb-6">Hey there.</span>
         )}
 

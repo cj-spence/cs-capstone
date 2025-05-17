@@ -12,7 +12,7 @@ export const ScrollDown = () => {
     <motion.div
       ref={ref}
       style={{ opacity }}
-      className="fixed !bottom-4 left-1/2 transform -translate-x-1/2 z-50"
+      className="fixed !bottom-20 left-1/2 transform -translate-x-1/2 z-50"
     >
       <div className="animate-bounce text-4xl text-black md:text-4xl lg:text-5xl">
         <FaChevronDown />

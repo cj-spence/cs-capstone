@@ -5,7 +5,6 @@ import { ScrollDown } from "./ScrollDown";
 import musheerhermannathan from "../assets/musheerhermannathan.jpg";
 import hermanandmusheer from "../assets/hermanandmusheer2.png";
 
-// Simple LazyLoad component using IntersectionObserver
 const LazyLoad = ({ children, placeholder = null, rootMargin = "100px" }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
@@ -116,7 +115,6 @@ const HorizontalScrollVideo = () => {
   const scrollWidth =
     content.length * (computedCardWidth + cardPadding + gapBetweenCards);
 
-  // 1:1 mapping: Every change in scrollYProgress directly translates to horizontal movement.
   const xTarget = useTransform(
     scrollYProgress,
     [0, 1],
@@ -194,7 +192,6 @@ const HorizontalScrollVideo = () => {
                   style={{ width: computedCardWidth }}
                 >
                   <div className="p-4 bg-accent rounded-xl">
-                    {/* Wrap image with LazyLoad */}
                     <LazyLoad
                       placeholder={
                         <div

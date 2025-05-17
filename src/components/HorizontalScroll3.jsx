@@ -196,7 +196,6 @@ const HorizontalScrollVideo = () => {
                   style={{ width: computedCardWidth }}
                 >
                   <div className="p-4 bg-accent rounded-xl">
-                    {/* Lazy load image */}
                     <LazyLoad
                       placeholder={
                         <div
