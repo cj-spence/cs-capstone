@@ -355,7 +355,7 @@ export const GallerySchool = () => {
                                 </h2>
                                 <p className="text-xs md:text-xl font-semibold mt-1">{item.desc}</p>
                                 <button
-                                  className="btn btn-sm md:btn-md lg:btn-lg mt-2 text-black animate-pulse"
+                                  className="btn btn-sm md:btn-md lg:btn-lg mt-2 text-black"
                                   onClick={() => openFullscreen(index)}
                                 >
                                   View Fullscreen

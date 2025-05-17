@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { MdHome } from "react-icons/md";
 import { RiGalleryFill } from "react-icons/ri";
 import { BiSolidInfoSquare } from "react-icons/bi";
+import { motion } from 'framer-motion';
 
 const DesktopNavbar = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -113,32 +114,50 @@ const MobileDock = () => {
   
   return (
     <div className="dock dock-md fixed z-50 bottom-0 left-0 w-full flex justify-around bg-base-100/60 backdrop-blur-md shadow-t p-2">
-      <Link
-        to="/gallery"
-        className="flex flex-col items-center"
-      >
-        <RiGalleryFill className="w-6 h-6 text-black mb-1" />
-        <span className="text-xs font-semibold text-center">Gallery</span>
-      </Link>
-      <Link
-        to="/"
-        onClick={() => {
-          if (location.pathname === "/") {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }
+      <motion.div
+        whileTap={{ 
+          scale: 0.85
         }}
-        className="flex flex-col items-center"
       >
-        <MdHome className="w-7 h-7 text-black mb-1" />
-        <span className="text-xs font-semibold text-center">Home</span>
-      </Link>
-      <Link
-        to="/about"
-        className="flex flex-col items-center"
+        <Link
+          to="/gallery"
+          className="flex flex-col items-center"
+        >
+          <RiGalleryFill className="w-6 h-6 text-black mb-1" />
+          <span className="text-xs font-semibold text-center">Gallery</span>
+        </Link>
+      </motion.div>
+      <motion.div
+        whileTap={{ 
+          scale: 0.85
+        }}
       >
-        <BiSolidInfoSquare className="w-6 h-6 text-black mb-1" />
-        <span className="text-xs font-semibold text-center">About</span>
-      </Link>
+        <Link
+          to="/"
+          onClick={() => {
+            if (location.pathname === "/") {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+          className="flex flex-col items-center"
+        >
+          <MdHome className="w-7 h-7 text-black mb-1" />
+          <span className="text-xs font-semibold text-center">Home</span>
+        </Link>
+      </motion.div>
+      <motion.div
+        whileTap={{ 
+          scale: 0.85
+        }}
+      >
+        <Link
+          to="/about"
+          className="flex flex-col items-center"
+        >
+          <BiSolidInfoSquare className="w-6 h-6 text-black mb-1" />
+          <span className="text-xs font-semibold text-center">About</span>
+        </Link>
+      </motion.div>
     </div>
   );
 };
