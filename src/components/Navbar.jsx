@@ -4,6 +4,7 @@ import { MdHome } from "react-icons/md";
 import { RiGalleryFill } from "react-icons/ri";
 import { BiSolidInfoSquare } from "react-icons/bi";
 import { motion } from 'framer-motion';
+import blmfist from '../assets/blmfist.png'
 
 const DesktopNavbar = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -104,7 +105,14 @@ const DesktopNavbar = () => {
           )}
         </div>
       </div>
-      <div className="navbar-end"></div>
+      <div className="navbar-end">
+        <img
+          src={blmfist}
+          alt="BLM Fist"
+          className="h-9 w-9 object-contain ml-2"
+          style={{ minWidth: "2.25rem" }}
+        />
+      </div>
     </div>
   );
 };
@@ -154,9 +162,14 @@ const MobileDock = () => {
           to="/about"
           className="flex flex-col items-center"
         >
-          <BiSolidInfoSquare className="w-6 h-6 text-black mb-1" />
+          <img
+            src={blmfist}
+            alt="BLM Fist"
+            className="w-6 h-6 mb-1 object-contain"
+            style={{ minWidth: "1.5rem" }}
+          />
           <span className="text-xs font-semibold text-center">About</span>
-        </Link>
+          </Link>
       </motion.div>
     </div>
   );

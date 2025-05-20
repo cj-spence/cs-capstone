@@ -92,10 +92,10 @@ export const Landing = () => {
           .
         </h2>
 
-        <h2 className="text-xl md:text-2xl mb-10 mt-5">
-          To navigate this page,{" "}
-          <span className="text-secondary text-shadow-sm font-semibold">
-            Scroll Down
+        <h2 className="text-lg md:text-xl mt-20">
+          You can easily navigate the page by {" "}
+          <span className="text-secondary text-shadow-sm text-xl md:text-2xl font-semibold">
+            Scrolling Down
           </span>
           .
         </h2>

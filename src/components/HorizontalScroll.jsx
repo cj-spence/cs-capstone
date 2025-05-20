@@ -140,7 +140,7 @@ const HorizontalScrollVideo = () => {
     <section
       ref={targetRef}
       style={{ height: `${sectionHeight}px` }}
-      className="relative -mt-4"
+      className="relative"
     >
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div

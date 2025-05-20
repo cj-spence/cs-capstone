@@ -4,7 +4,7 @@ import musheerandfriends from '../assets/musheerandfriends.jpg'
 export const Transition2 = () => {
     
     return (
-        <section id="" className="flex flex-col items-center justify-center text-center relative py-16 md:py-24 lg:py-70 overflow-hidden">
+        <section id="" className="flex flex-col items-center justify-center text-center relative py-0 lg:py-0 overflow-hidden">
 
             <div data-aos="" className="flex flex-col items-center justify-center mx-auto px-4 text-center sm:px-6 w-full max-w-4xl">
                 <div className="p-4 bg-secondary rounded-xl flex-shrink-0">

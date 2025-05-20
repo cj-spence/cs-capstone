@@ -138,7 +138,7 @@ const HorizontalScrollVideo = () => {
     <section
       ref={targetRef}
       style={{ height: `${sectionHeight}px` }}
-      className="relative -mt-4"
+      className="relative"
     >
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div
@@ -225,7 +225,7 @@ const HorizontalScrollVideo = () => {
                         src={item.url}
                         alt={item.alt}
                         loading="lazy"
-                        className="w-full h-[40vh] sm:h-[400px] object-cover rounded-lg"
+                        className="w-full h-[40vh] sm:h-[400px] object-fill` rounded-lg"
                       />
                     </LazyLoad>
                     {item.caption && (

@@ -43,6 +43,10 @@ const Timeline4 = lazy(() =>
 const Outro = lazy(() =>
   import('./pages/Outro').then((module) => ({ default: module.Outro }))
 );
+const HorizontalScroll = lazy(() => import('./components/HorizontalScroll'));
+const HorizontalScroll2 = lazy(() => import('./components/HorizontalScroll2'));
+const HorizontalScroll3 = lazy(() => import('./components/HorizontalScroll3'));
+const HorizontalScroll4 = lazy(() => import('./components/HorizontalScroll4'));
 
 function Home() {
   return (
@@ -64,10 +68,38 @@ function Home() {
 function GalleryPaths() {
   return (
     <Routes>
-      <Route index element={<GalleryMain />} />
-      <Route path="/interviews" element={<GalleryInterviews />} />
-      <Route path="/saintmarys" element={<GallerySchool />} />
-      <Route path="/activism" element={<GalleryActivism />} />
+      <Route
+        index
+        element={
+          <Suspense fallback={<div></div>}>
+            <GalleryMain />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/interviews"
+        element={
+          <Suspense fallback={<div></div>}>
+            <GalleryInterviews />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/saintmarys"
+        element={
+          <Suspense fallback={<div></div>}>
+            <GallerySchool />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/activism"
+        element={
+          <Suspense fallback={<div></div>}>
+            <GalleryActivism />
+          </Suspense>
+        }
+      />
     </Routes>
   );
 }
