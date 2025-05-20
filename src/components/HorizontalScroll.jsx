@@ -1,23 +1,38 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
-import ReactPlayer from "react-player";
-import { ScrollDown } from "./ScrollDown";
+import { useRef, useState, useEffect, lazy, Suspense, useMemo } from "react";
 import ponchatoula from "../assets/ponchatoula.png";
 import hermanstown from "../assets/hermansproject.png";
 
-const LazyLoad = ({ children, placeholder, rootMargin = "0px" }) => {
+const ReactPlayer = lazy(() => import("react-player"));
+
+function debounce(fn, ms) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), ms);
+  };
+}
+
+const LazyLoad = ({ children, placeholder, rootMargin = "500px" }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
   useEffect(() => {
+    let ticking = false;
     const observer = new IntersectionObserver(
       entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.disconnect();
-          }
-        });
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                setIsVisible(true);
+                observer.disconnect();
+              }
+            });
+            ticking = false;
+          });
+          ticking = true;
+        }
       },
       { rootMargin }
     );
@@ -34,7 +49,7 @@ const HorizontalScrollVideo = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
 
-  const content = [
+  const content = useMemo(() => [
     {
       type: "text",
       id: 2,
@@ -83,7 +98,7 @@ const HorizontalScrollVideo = () => {
       alt: "Musheer's Hometown",
       caption: "Ponchatoula, Louisiana - [1936]",
     },
-  ];
+  ], []);
 
   const cardPadding = 32;
   const gapBetweenCards = 20;
@@ -95,7 +110,7 @@ const HorizontalScrollVideo = () => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    const onResize = () => {
+    const onResize = debounce(() => {
       const vw = window.innerWidth;
       const newCardWidth = vw > 640 ? 760 : vw * 0.9;
       setComputedCardWidth(newCardWidth);
@@ -105,7 +120,7 @@ const HorizontalScrollVideo = () => {
         content.length * (newCardWidth + cardPadding + gapBetweenCards);
       const maxScrollNeeded = Math.max(totalScroll - vw, 0);
       setSectionHeight(window.innerHeight + maxScrollNeeded);
-    };
+    }, 100);
 
     onResize();
     window.addEventListener("resize", onResize);
@@ -157,9 +172,13 @@ const HorizontalScrollVideo = () => {
                           }}
                         />
                       }
-                      rootMargin="100px"
+                      rootMargin="200px"
                     >
-                      <VideoPlayer url={item.url} />
+                      <Suspense fallback={
+                        <div style={{height: "400px", width: "100%", background: "#eee"}} />
+                      }>
+                        <VideoPlayer url={item.url} />
+                      </Suspense>
                     </LazyLoad>
                     <p className="text-center text-md text-black mt-2">
                       {item.caption}
@@ -204,7 +223,7 @@ const HorizontalScrollVideo = () => {
                           }}
                         />
                       }
-                      rootMargin="100px"
+                      rootMargin="200px"
                     >
                       <img
                         src={item.url}
@@ -226,13 +245,12 @@ const HorizontalScrollVideo = () => {
           })}
         </motion.div>
       </div>
-      <ScrollDown />
     </section>
   );
 };
 
 const VideoPlayer = ({ url }) => {
-  const [muted, setMuted] = useState(true);
+  const [muted] = useState(true);
   const playerRef = useRef(null);
 
   return (

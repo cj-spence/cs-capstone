@@ -1,33 +1,44 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
-import ReactPlayer from "react-player";
-import { ScrollDown } from "./ScrollDown";
+import { useRef, useState, useEffect, lazy, Suspense, useMemo } from "react";
 import bsudemands from "../assets/bsudemands.png";
 import chapeloccupation from "../assets/chapeloccupation.png";
 
-const LazyLoad = ({ children, placeholder = null, rootMargin = "300px" }) => {
+const ReactPlayer = lazy(() => import("react-player"));
+
+function debounce(fn, ms) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), ms);
+  };
+}
+
+const LazyLoad = ({ children, placeholder, rootMargin = "500px" }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
   useEffect(() => {
+    let ticking = false;
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.disconnect();
-          }
-        });
+      entries => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                setIsVisible(true);
+                observer.disconnect();
+              }
+            });
+            ticking = false;
+          });
+          ticking = true;
+        }
       },
       { rootMargin }
     );
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    if (ref.current) observer.observe(ref.current);
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      if (ref.current) observer.unobserve(ref.current);
     };
   }, [rootMargin]);
 
@@ -38,7 +49,7 @@ const HorizontalScrollVideo = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
 
-  const content = [
+  const content = useMemo(() => [
     {
       type: "text",
       id: 2,
@@ -89,7 +100,7 @@ const HorizontalScrollVideo = () => {
       caption:
         "In the aftermath of the basketball team walkout, BSU and MEChA student activists fasted and slept in the Chapel pews for several days in response to the potential elimination of Chicano Studies courses.",
     }
-  ];
+  ], []);
 
   const cardPadding = 32;
   const gapBetweenCards = 20;
@@ -101,7 +112,7 @@ const HorizontalScrollVideo = () => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    const onResize = () => {
+    const onResize = debounce(() => {
       const vw = window.innerWidth;
       const newCardWidth = vw > 640 ? 760 : vw * 0.9;
       setComputedCardWidth(newCardWidth);
@@ -111,7 +122,7 @@ const HorizontalScrollVideo = () => {
         content.length * (newCardWidth + cardPadding + gapBetweenCards);
       const maxScrollNeeded = Math.max(totalScroll - vw, 0);
       setSectionHeight(window.innerHeight + maxScrollNeeded);
-    };
+    }, 100);
 
     onResize();
     window.addEventListener("resize", onResize);
@@ -165,7 +176,11 @@ const HorizontalScrollVideo = () => {
                       }
                       rootMargin="200px"
                     >
-                      <VideoPlayer url={item.url} />
+                      <Suspense fallback={
+                        <div style={{height: "400px", width: "100%", background: "#eee"}} />
+                      }>
+                        <VideoPlayer url={item.url} />
+                      </Suspense>
                     </LazyLoad>
                     <p className="text-center text-md text-black mt-2">
                       {item.caption}
@@ -211,6 +226,7 @@ const HorizontalScrollVideo = () => {
                       <img
                         src={item.url}
                         alt={item.alt}
+                        loading="lazy"
                         className="w-full h-[40vh] sm:h-[400px] object-cover rounded-lg"
                       />
                     </LazyLoad>
@@ -227,13 +243,12 @@ const HorizontalScrollVideo = () => {
           })}
         </motion.div>
       </div>
-      <ScrollDown />
     </section>
   );
 };
 
 const VideoPlayer = ({ url }) => {
-  const [muted, setMuted] = useState(true);
+  const [muted] = useState(true);
   const playerRef = useRef(null);
 
   return (
